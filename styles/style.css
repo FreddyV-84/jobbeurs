@@ -1,202 +1,238 @@
 /* --------------------------------------------------------------------------------------------
     COLORS
-        background:         #232323
-        color2:             #cdcdcd
-        color3:     
+        background:         #00263c
+        text color:         #98c3da
+        colors...     
 
-        Menu background:    #ededed
-
-    HEIGHTS
-        header menu navigation height:  60px    #wrapper && header
+        Menu background:    transparent
+        ...
 -------------------------------------------------------------------------------------------- */
 
 * {
-    line-height: 1.9rem;
+  line-height: 1.5rem;
 }
 
-html,
 body {
-    margin: 0;
-    padding: 0;
-
-    background: #232323;
-    color: #cdcdcd;
-    font-size: 16px;
-    font-family: "Avenir Next", "Avenir", sans-serif;
+  margin: 0;
+  width: 100vw;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  background-color: #00263c;
+  color: #98c3da;
 }
 
-#wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-top: 60px; /* offset wrapper for fixed header */
+section {
+  width: 100vw;
+  text-align: center;
+  padding: 20px;
+  height: 500px;
+  border: 2px solid black;
+  background: linear-gradient(to bottom, #1e5575 0%, #00263c 100%);
 }
 
-header{
-    background-color: black;
+h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
 }
 
-header,
-section,
-footer {
-    block-size: border-box;
-    border: 1px solid black;
+h3 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 15px;
+  margin: 15px;
 }
 
-header {
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    top: 0;
+.small {
+  font-size: 12px;
+  text-transform: lowercase;
+  font-weight: 300;
+  text-align: center;
+  display: block;
 }
 
-/* --------------------------------------------------------------------------------------------
-                                MENU
--------------------------------------------------------------------------------------------- */
- a
- {
-   text-decoration: none;
-   color: #232323;
-   
-   transition: color 0.3s ease;
- }
- 
- a:hover
- {
-   color: rgb(11, 60, 165);
- }
- 
- #menuToggle
- {
-   display: block;
-   position: relative;
-   top: 20px;
-   left: 20px;
-   
-   z-index: 1;
-   
-   -webkit-user-select: none;
-   user-select: none;
- }
- 
- #menuToggle input
- {
-   display: block;
-   width: 40px;
-   height: 32px;
-   position: absolute;
-   top: -7px;
-   left: -5px;
-   
-   cursor: pointer;
-   
-   opacity: 0; /* hide this */
-   z-index: 2; /* and place it over the hamburger */
-   
-   -webkit-touch-callout: none;
- }
- 
- /*
-  * Just a quick hamburger
-  */
- #menuToggle span
- {
-   display: block;
-   width: 33px;
-   height: 4px;
-   margin-bottom: 5px;
-   position: relative;
-   
-   background: #cdcdcd;
-   border-radius: 3px;
-   
-   z-index: 1;
-   
-   transform-origin: 4px 0px;
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               opacity 0.55s ease;
- }
- 
- #menuToggle span:first-child
- {
-   transform-origin: 0% 0%;
- }
- 
- #menuToggle span:nth-last-child(2)
- {
-   transform-origin: 0% 100%;
- }
- 
- /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
- #menuToggle input:checked ~ span
- {
-   opacity: 1;
-   transform: rotate(45deg) translate(-2px, -1px);
-   background: #232323;
- }
- 
- /*
-  * But let's hide the middle one.
-  */
- #menuToggle input:checked ~ span:nth-last-child(3)
- {
-   opacity: 0;
-   transform: rotate(0deg) scale(0.2, 0.2);
- }
- 
- /*
-  * Ohyeah and the last one should go the other direction
-  */
- #menuToggle input:checked ~ span:nth-last-child(2)
- {
-   transform: rotate(-45deg) translate(0, -1px);
- }
- 
- /*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
- #menu
- {
-   position: absolute;
-   width: 300px;
-   margin: -100px 0 0 -50px;
-   padding: 50px;
-   padding-top: 125px;
-   
-   background: #ededed;
-   list-style-type: none;
-   -webkit-font-smoothing: antialiased;
-   /* to stop flickering of text in safari */
-   
-   transform-origin: 0% 0%;
-   transform: translate(-100%, 0);
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
- }
- 
- #menu li
- {
-   padding: 10px 0;
-   font-size: 22px;
- }
- 
- /*
-  * And let's slide it in from the left
-  */
- #menuToggle input:checked ~ ul
- {
-   transform: none;
- }
 
-@media (min-width: 20px) and (max-width: 768px) {}
+/* HAMBURGER MENU
+-------------------------------------------------------------------------------------------- Start Menu */
 
-@media (min-width: 20px) and (max-width: 410px) {}
+.navicon {
+  width: 100%;
+  background: transparent;
+  margin: 0;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: 30px;
+  width: 50px;
+  display: block;
+  z-index: 99;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+}
 
-@media (min-width: 769px) and (max-width:1024px) {}
+.navicon:before,
+.navicon:after {
+  background: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  content: "";
+  height: 3px;
+  left: 0;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+  width: 45px;
+}
 
-@media (min-width: 769px) and (max-width: 996px) {}
+.navicon:before {
+  box-shadow: #fff 0 14px 0 0;
+  position: absolute;
+  top: 0;
+}
+
+.navicon:after {
+  position: absolute;
+  top: 28px;
+}
+
+.navicon--active {
+  margin-top: 20px;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+}
+
+.navicon--active:before {
+  box-shadow: transparent 0 0 0 0;
+  top: 15px;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.navicon--active:after {
+  top: 15px;
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+.toggle {
+  display: block;
+  position: fixed;
+  margin: 0;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  opacity: 0;
+  -webkit-transition: ease-in 0.5s all;
+  transition: ease-in 0.5s all;
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+  min-width: 320px;
+}
+
+.toggle--active {
+  opacity: 1;
+  -webkit-transition: ease-in 0.5s all;
+  transition: ease-in 0.5s all;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  /* border-top-right-radius: 30px; */
+}
+
+.toggle__menu {
+  margin-bottom: 25px;
+  padding: 0 30px;
+}
+
+.toggle__menu li {
+  display: block;
+  margin: 10px auto;
+}
+
+.toggle__menu li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.toggle__menu li a span {
+  text-transform: lowercase;
+}
+
+.toggle__menu li a:hover {
+  color: #db5523;
+  border-bottom: 2px solid #db5523;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+  font-weight: 700;
+}
+
+.social {
+  display: block;
+  width: 70%;
+  margin: 25px auto;
+  text-align: center;
+  font-size: 0;
+}
+
+.social li {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+
+.social li a {
+  text-align: center;
+  color: #000;
+  font-size: 25px;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+}
+
+.social li a:hover {
+  color: #db5523;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+}
+
+
+/* _________________________________________________________________________________________ end Menu */
+
+
+/*  MEDIA QUERY: for-phone-only
+-------------------------------------------------------------------------------------------- max-width: 768px */
+
+@media (max-width: 768px) {}
+
+
+/*  MEDIA QUERY: for-tablet-portrait-up
+-------------------------------------------------------------------------------------------- min-width: 600px */
+
+@media (min-width: 600px) {}
+
+
+/*  MEDIA QUERY: for-tablet-landscape-up
+-------------------------------------------------------------------------------------------- min-width: 900px */
+
+@media (min-width: 900px) {}
+
+
+/*  MEDIA QUERY: for-desktop-up
+-------------------------------------------------------------------------------------------- min-width: 1200px */
+
+@media (min-width: 1200px) {}
+
+
+/*  MEDIA QUERY: for-big-desktop-up
+-------------------------------------------------------------------------------------------- min-width: 1800px */
+
+@media (min-width: 1800px) {}
