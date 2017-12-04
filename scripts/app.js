@@ -9,13 +9,7 @@
 window.onload = init;
 
 function init() {
-    var navIcon = document.querySelector('.navicon'); // get handle on the navicon (a tag html element with class 'navicon')
-    var toggle = document.querySelector('.toggle'); // get handle on the toggle (div tag with class 'toggle')
-
-    navIcon.onclick = function () {
-        navIcon.classList.toggle('navicon--active');
-        toggle.classList.toggle('toggle--active');
-    }
+    document.querySelector('.navicon').onclick = toggleMenu;
 
     var links = document.querySelectorAll('.toggle__menu a');
 
@@ -25,10 +19,19 @@ function init() {
         } catch (ii) {
             links[ii].onclick = (e) => {
                 e.preventDefault();
+                toggleMenu();
                 scrollTo(document.getElementById("section" + (ii + 1)));
             }
         }
     }
+}
+
+function toggleMenu() {
+    var navIcon = document.querySelector('.navicon'); // get handle on the navicon (a tag html element with class 'navicon')
+    var toggle = document.querySelector('.toggle'); // get handle on the toggle (div tag with class 'toggle')
+
+    navIcon.classList.toggle('navicon--active');
+    toggle.classList.toggle('toggle--active');
 }
 
 function scrollTo(element) {
