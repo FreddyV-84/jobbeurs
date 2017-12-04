@@ -8,10 +8,6 @@
         ...
 -------------------------------------------------------------------------------------------- */
 
-* {
-  line-height: 1.5rem;
-}
-
 body {
   margin: 0;
   width: 100vw;
@@ -30,18 +26,23 @@ section {
   background: linear-gradient(to bottom, #1e5575 0%, #00263c 100%);
 }
 
+
+/* HAMBURGER MENU
+-------------------------------------------------------------------------------------------- Start Menu */
+
 h1 {
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 40px;
-  text-align: center;
+  font-size: 30px;
+  text-align: right;
+  margin: 20px 0 0 0;
 }
 
 h3 {
-  text-align: center;
+  text-align: right;
   font-weight: 900;
   font-size: 15px;
-  margin: 15px;
+  margin: 5px 0 0 0;
 }
 
 .small {
@@ -51,10 +52,6 @@ h3 {
   text-align: center;
   display: block;
 }
-
-
-/* HAMBURGER MENU
--------------------------------------------------------------------------------------------- Start Menu */
 
 .navicon {
   width: 100%;
@@ -138,6 +135,11 @@ h3 {
   /* border-top-right-radius: 30px; */
 }
 
+.toggle_header {
+  margin-left: 60px;
+  padding-right: 15px;
+}
+
 .toggle__menu {
   margin-bottom: 25px;
   padding: 0 30px;
@@ -152,7 +154,7 @@ h3 {
   text-decoration: none;
   color: #000;
   display: block;
-  text-align: center;
+  text-align: right;
   font-size: 17px;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
