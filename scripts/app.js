@@ -1,11 +1,5 @@
 'use strict';
 
-// $('.navicon').on('click', function (e) {
-//     e.preventDefault();
-//     $(this).toggleClass('navicon--active');
-//     $('.toggle').toggleClass('toggle--active');
-//   });
-
 window.onload = init;
 
 function init() {
