@@ -1,10 +1,16 @@
 'use strict';
 
+var headerHeight;
+
 window.onload = init;
+window.onresize = function () {
+    headerHeight = document.querySelector('#menu').offsetHeight;
+}
 
 function init() {
+    headerHeight = document.querySelector('#menu').offsetHeight;
+    
     document.querySelector('.navicon').onclick = toggleMenu;
-    var headerHeight = document.querySelector('.toggle').offsetHeight;
     var links = document.querySelectorAll('.toggle__menu a');
 
 

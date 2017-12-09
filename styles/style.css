@@ -56,6 +56,10 @@ h3 {
   display: block;
 }
 
+#menu{
+  height: 0;
+}
+
 .navicon {
   background: transparent;
   margin: 0;
