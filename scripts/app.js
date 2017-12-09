@@ -4,8 +4,9 @@ window.onload = init;
 
 function init() {
     document.querySelector('.navicon').onclick = toggleMenu;
-
+    var headerHeight = document.querySelector('.toggle').offsetHeight;
     var links = document.querySelectorAll('.toggle__menu a');
+
 
     for (var i = 0; i < links.length; i++) {
         try {
@@ -14,7 +15,7 @@ function init() {
             links[ii].onclick = (e) => {
                 e.preventDefault();
                 toggleMenu();
-                scrollTo(document.getElementById("section" + (ii + 1)));
+                scrollTo(document.getElementById("section" + (ii + 1)).offsetTop - headerHeight);
             }
         }
     }
@@ -28,10 +29,10 @@ function toggleMenu() {
     toggle.classList.toggle('toggle--active');
 }
 
-function scrollTo(element) {
+function scrollTo(elementTop) {
     window.scroll({
         behavior: 'smooth',
         left: 0,
-        top: element.offsetTop
+        top: (elementTop)
     });
 }
