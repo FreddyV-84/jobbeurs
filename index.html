@@ -88,7 +88,48 @@
         Partners
     </section>
     <section id="section7">
-        Contact
+        <div id="contact-form">
+            <form action="scripts/contact.php" method="POST" name="frmContact" id="frmContact" class="frmContact" novalidate>
+                <div class="control-group">
+                    <div class="form-group">
+                        <div class="controls">
+                            <input type="text" name="naam" id="naam" class="form-control" placeholder="Naam" required data-validation-required-message="Naam ontbreekt">
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group">
+                        <div class="controls">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required data-validation-email-message="Ongeldig e-mail adres"
+                                data-validation-required-message="E-mail adres ontbreekt">
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group">
+                        <div class="controls">
+                            <input type="text" name="bedrijfNaam" id="bedrijfNaam" placeholder="Bedrijf" required data-validation-required-message="Bedrijfsnaam ontbreekt">
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group">
+                        <div class="controls">
+                            <input type="tel" name="tel" id="tel" class="form-control" placeholder="Telefoon" required data-validation-required-message="Telefoon ontbreekt">
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group">
+                        <div class="controls">
+                            <textarea name="berichtFrm" id="berichtFrm" cols="30" rows="10" class="form-control" placeholder="Bericht" required data-validation-required-message="Bericht ontbreekt"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="btnContactFrm" class="btnContactFrm">Verstuur</button>
+            </form>
+            <div id="success"></div>
+        </div>
     </section>
     <footer>Footer</footer>
     <!-- </div> -->
