@@ -21,9 +21,8 @@ body {
 section {
   width: 100vw;
   text-align: center;
-  padding: 20px;
+  padding: 5px;
   margin: 0;
-  border: 2px solid black;
   background: linear-gradient(to bottom, #1e5575 0%, #00263c 100%);
 }
 
