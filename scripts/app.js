@@ -1,5 +1,7 @@
 'use strict';
 
+/* tester dmitryi */
+
 var headerHeight;
 
 window.onload = init;
