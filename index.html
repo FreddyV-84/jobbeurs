@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
-    <title>The Scriptors Meet & Greet</title>
+    <title>The Scriptors Meet &amp; Greet</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 </head>
+
 
 <body>
     <!-- <div id="wrapper"> -->
@@ -19,7 +21,7 @@
         <div class="toggle">
             <header class="toggle_header">
                 <h1>The Scriptors</h1>
-                <h3>Meet & Greet</h3>
+                <h3>Meet &amp; Greet</h3>
             </header>
             <ul class="toggle__menu">
                 <li>
@@ -70,7 +72,37 @@
         </div>
     </header>
     <section id="section1">
-        Welkom/Intro
+        <div id="titel">
+            <h1>THE SCRIPTORS</h1>
+        </div>
+        <div id="welkom">
+            <div>
+                <div id="opvul">
+                    <br>
+                    <p>Deze tekst is niet om te zien maar dient als opvulling van het tekstblok.</p>
+                    <p>De aftel counter is gemaarkt door Erwin en geeft aan wanneer de beurs start.</p>
+                    <p> De welkom tekst is opgesteld door Tom en in JavaScript bewerkt door Erwin.</p>
+                    <p>Tot ziens op onze jobbeurs</p>
+                    <br>
+                </div>
+                <div id="intro">
+                    <p>Wij zijn 9 leergierige enthousiastelingen, die sinds oktober de opleiding “Javascript front-end ontwikkelaar”
+                        volgen bij de Beta vzw in samenwerking met Cevora en VDAB.</p>
+                    <p>De opleiding omvat naast Javascript, HTML5 en CSS3 nog verschillende andere front-end gerelateerde aspecten.
+                        Een meer gedetailleerde lijst kan u terugvinden onder het topic Skills.</p>
+                    <br>
+                </div>
+                <div id="beurs">
+                    <p>Via deze site kan u zich inschrijven voor onze jobbeurs die zal plaatsvinden op donderdag 25 januari
+                        vanaf 12u30 in de Belpairestraat 39 te Berchem. Het inschrijvingsformulier en programma van deze
+                        dag vindt u hieronder terug.</p>
+                    <p>We werken met speeddates, zodat iedereen aan bod kan komen en u meteen kan inschatten welk profiel het
+                        beste binnen uw bedrijf past. U kan alvast een kijkje nemen naar onze CV onder het topic Cursisten.</p>
+                    <p>Hopelijk tot dan!</p>
+                </div>
+            </div>
+        </div>
+        <div id="counter"></div>
     </section>
     <section id="section2">
         Programma
@@ -79,7 +111,29 @@
         Onze Opleiding
     </section>
     <section id="section4">
-        Cursisten
+        <div id="cursisten-container">
+            <!--Full res versie
+                9 kleine foto's (full length 1 foto)
+                Grote foto (landscape) + HOVER-effect
+                Met tekst (Cursisten-naam + korte info (eigen tekstje))
+                Laatste blokje: CV en link naar Linkedin (officieel logo) -->
+            <div id="cursisten-kleineFotos">
+                <!-- zie JavaScript -->
+            </div>
+            <div id="cursisten-groteFotos">
+                <!-- zie JavaScript -->
+                <button id="button-left">&#10094;</button>
+                <button id="button-right">&#10095;</button>
+            </div>
+            <div id="cursisten-infoTekst">
+                <h2 id="infoTitel">Lorem Ipsum</h2>
+                <p id="infoTekst">Lorem ipsum dolor sit</p>
+            </div>
+            <div id="cursisten-infoLinks">
+                <img src="./img/cursisten/cv.svg" alt="">
+                <img src="./img/cursisten/linkedin.svg" alt="">
+            </div>
+        </div>
     </section>
     <section id="section5">
         Inschrijvingsformulier
@@ -88,52 +142,92 @@
         Partners
     </section>
     <section id="section7">
-        <div id="contact-form">
-            <form action="scripts/contact.php" method="POST" name="frmContact" id="frmContact" class="frmContact" novalidate>
-                <div class="control-group">
-                    <div class="form-group">
-                        <div class="controls">
-                            <input type="text" name="naam" id="naam" class="form-control" placeholder="Naam" required data-validation-required-message="Naam ontbreekt">
-                        </div>
+        <!-- <div id="contact-form"> -->
+        <form action="scripts/contact.php" method="POST" name="frmContact" id="frmContact" class="frmContact" novalidate>
+            <div class="control-group">
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="text" name="naam" id="naam" class="form-control" placeholder="Naam" required data-validation-required-message="Naam ontbreekt">
                     </div>
                 </div>
-                <div class="control-group">
-                    <div class="form-group">
-                        <div class="controls">
-                            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required data-validation-email-message="Ongeldig e-mail adres"
-                                data-validation-required-message="E-mail adres ontbreekt">
-                        </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required data-validation-email-message="Ongeldig e-mail adres"
+                            data-validation-required-message="E-mail adres ontbreekt">
                     </div>
                 </div>
-                <div class="control-group">
-                    <div class="form-group">
-                        <div class="controls">
-                            <input type="text" name="bedrijfNaam" id="bedrijfNaam" placeholder="Bedrijf" required data-validation-required-message="Bedrijfsnaam ontbreekt">
-                        </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="text" name="bedrijfNaam" id="bedrijfNaam" placeholder="Bedrijf" required data-validation-required-message="Bedrijfsnaam ontbreekt">
                     </div>
                 </div>
-                <div class="control-group">
-                    <div class="form-group">
-                        <div class="controls">
-                            <input type="tel" name="tel" id="tel" class="form-control" placeholder="Telefoon" required data-validation-required-message="Telefoon ontbreekt">
-                        </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="tel" name="tel" id="tel" class="form-control" placeholder="Telefoon" required data-validation-required-message="Telefoon ontbreekt">
                     </div>
                 </div>
-                <div class="control-group">
-                    <div class="form-group">
-                        <div class="controls">
-                            <textarea name="berichtFrm" id="berichtFrm" cols="30" rows="10" class="form-control" placeholder="Bericht" required data-validation-required-message="Bericht ontbreekt"></textarea>
-                        </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <div class="controls">
+                        <textarea name="berichtFrm" id="berichtFrm" cols="30" rows="10" class="form-control" placeholder="Bericht" required data-validation-required-message="Bericht ontbreekt"></textarea>
                     </div>
                 </div>
-                <button type="submit" id="btnContactFrm" class="btnContactFrm">Verstuur</button>
-            </form>
-            <div id="success"></div>
+            </div>
+            <button type="submit" id="btnContactFrm" class="btnContactFrm">Verstuur</button>
+        </form>
+        <div id="success"></div>
+        <!-- </div> -->
+        <div class="geg" id="geg">
+            <div class="row">
+                <div class="gegItem">
+                    <p>
+                        <i class="fa fas fa-phone-volume fa-2x"></i>
+                    </p>
+                    <h5>
+                        <strong>Telefoon</strong>
+                    </h5>
+                    <p>
+                        <a href="tel:+3233699303"> 03 369 93 03</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row brd">
+                <div class="gegItem">
+                    <p>
+                        <i class="fa fas fa-map-marker-alt fa-2x"></i>
+                    </p>
+                    <h5>
+                        <strong>Locatie</strong>
+                    </h5>
+                    <p>Boombekelaan 18 / 2660 Antwerpen (België)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="gegItem">
+                    <p>
+                        <i class="fa fas fa-envelope fa-2x"></i>
+                    </p>
+                    <h5>
+                        <strong>E-mail</strong>
+                    </h5>
+                    <p>
+                        <a href="mailto:philipsenwout@outlook.com"> info@thescriptors.be</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     <footer>Footer</footer>
     <!-- </div> -->
 </body>
 <script src="scripts/app.js"></script>
+
 
 </html>

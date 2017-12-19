@@ -21,9 +21,8 @@ body {
 section {
   width: 100vw;
   text-align: center;
-  padding: 20px;
-  height: 500px;
-  border: 2px solid black;
+  padding: 0;
+  margin: 0;
   background: linear-gradient(to bottom, #1e5575 0%, #00263c 100%);
 }
 
@@ -31,7 +30,7 @@ section {
 /* HAMBURGER MENU
 -------------------------------------------------------------------------------------------- Start Menu */
 
-h1 {
+#menu h1 {
   color: #db5523;
   font-weight: 300;
   text-transform: uppercase;
@@ -40,7 +39,7 @@ h1 {
   margin: 20px 5px 0 0;
 }
 
-h3 {
+#menu h3 {
   color: #db5523;
   text-align: right;
   font-weight: 900;
@@ -56,7 +55,7 @@ h3 {
   display: block;
 }
 
-#menu{
+#menu {
   height: 0;
 }
 
@@ -122,7 +121,7 @@ h3 {
   position: fixed;
   margin: 0;
   width: 30%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(187, 187, 187);
   padding: 15px;
   opacity: 0;
   -webkit-transition: ease-in 0.5s all;
@@ -130,6 +129,7 @@ h3 {
   -webkit-transform: translateX(-200%);
   transform: translateX(-200%);
   min-width: 320px;
+  z-index: 98;
 }
 
 .toggle--active {
@@ -212,8 +212,203 @@ h3 {
   transition: linear 0.5s all;
 }
 
+#section7 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-content: center; */
+}
+
+#frmContact {
+  flex-grow: 1;
+  width: 45%;
+}
+
+#geg {
+  lex-grow: 1;
+  width: 45%;
+}
+
+#btnContactFrm {}
+
 
 /* _________________________________________________________________________________________ end Menu */
+
+
+/* SECTION WELCOME
+-------------------------------------------------------------------------------------------- Section Welcome */
+
+#titel,
+#welkom,
+#counter {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#titel>h1:hover {
+  animation: vergroot 4s;
+  cursor: zoom-in;
+}
+
+@keyframes vergroot {
+  0% {
+    font-size: 36px;
+  }
+  90% {
+    font-size: 64px;
+  }
+  100% {
+    font-size: 36px;
+  }
+}
+
+#titel>h1 {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 24px;
+  text-shadow: 4px 4px 4px grey;
+}
+
+#welkom>div {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 24px;
+  max-width: 650px;
+}
+
+#welkom p {
+  text-align: center;
+  margin: 16px;
+}
+
+#opvul {
+  color: rgba(0, 0, 0, 0);
+}
+
+#intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: verdwijn 16s infinite;
+}
+
+#beurs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: verdwijn 16s infinite reverse;
+}
+
+@keyframes verdwijn {
+  0% {
+    color: rgba(255, 255, 255, 0);
+  }
+  10% {
+    color: rgba(255, 255, 255, 1);
+  }
+  45% {
+    color: rgba(255, 255, 255, 1);
+  }
+  55% {
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+
+#counter {
+  padding: 4px;
+}
+
+#counter>div {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 4px;
+  width: 80px;
+}
+
+#counter>div>h1 {
+  font-size: 32px;
+  padding: 16px;
+  box-shadow: 4px 2px black;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(100, 100, 200, 0.8), rgba(0, 0, 0, 0.3));
+}
+
+#counter>div>h5 {
+  text-align: center;
+}
+
+
+/* _________________________________________________________________________________________ end Section Welcome */
+
+
+/* SECTION STUDENTS
+-------------------------------------------------------------------------------------------- Section Students */
+#cursisten-container {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#cursisten-kleineFotos {
+  width: 100%;
+}
+
+.cursisten-Kfoto {
+  display: inline-block;
+  width: 18%;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+#cursisten-groteFotos {
+  width: 100%;
+  position: relative;
+}
+
+.cursisten-Gfoto {
+  display: none;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#cursisten-infoTekst {
+  width: 100%;
+  text-align: justify;
+}
+
+#cursisten-infoLinks {
+  width: 100%;
+}
+
+#cursisten-infoLinks>img {
+  cursor: pointer;
+  width: 5%;
+  margin: 0 20px;
+}
+
+#button-left {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(-0%, -50%);
+  display: block;
+}
+
+#button-right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(-0%, -50%);
+  display: block;
+}
+
+
+/* _________________________________________________________________________________________ end Section Students */
 
 
 /*  MEDIA QUERY: for-phone-only
@@ -277,6 +472,18 @@ h3 {
   .small {
     display: none;
   }
+
+  /* SECTION STUDENTS */
+  #button-left {
+    display: none;
+  }
+  #button-right {
+    display: none;
+  }
+  .cursisten-Kfoto {
+    width: 9%;
+  }
+  /* END SECTION STUDENTS */
 }
 
 
