@@ -1,8 +1,6 @@
 'use strict';
 
-/* tester dmitryi */
-
-var headerHeight;
+var headerHeight; // to offset menu header
 let fotoI = 1; // globale variabele die huidig getoonde image(waarde) bevat (wordt aangepast in functies)
 
 
@@ -18,16 +16,24 @@ function init() {
     var links = document.querySelectorAll('.toggle__menu a');
 
 
-    for (var i = 0; i < links.length; i++) {
-        try {
-            throw i
-        } catch (ii) {
-            links[ii].onclick = (e) => {
+    // for (var i = 0; i < links.length; i++) {
+    //     try {
+    //         throw i
+    //     } catch (ii) {
+    //         links[ii].onclick = (e) => {
+    //             e.preventDefault();
+    //             toggleMenu();
+    //             scrollTo(document.getElementById("section" + (ii + 1)).offsetTop - headerHeight);
+    //         }
+    //     }
+    // }
+
+    for (let i = 0; i < links.length; i++) {
+            links[i].onclick = (e) => {
                 e.preventDefault();
                 toggleMenu();
-                scrollTo(document.getElementById("section" + (ii + 1)).offsetTop - headerHeight);
+                scrollTo(document.getElementById("section" + (i + 1)).offsetTop - headerHeight);
             }
-        }
     }
 
     initSectionWelcome();
