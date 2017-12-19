@@ -119,7 +119,7 @@ section {
   position: fixed;
   margin: 0;
   width: 30%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(187, 187, 187);
   padding: 15px;
   opacity: 0;
   -webkit-transition: ease-in 0.5s all;
@@ -127,6 +127,7 @@ section {
   -webkit-transform: translateX(-200%);
   transform: translateX(-200%);
   min-width: 320px;
+  z-index: 98;
 }
 
 .toggle--active {
