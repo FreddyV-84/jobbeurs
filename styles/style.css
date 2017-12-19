@@ -27,7 +27,6 @@ section {
   background: linear-gradient(to bottom, #1e5575 0%, #00263c 100%);
 }
 
-
 /* HAMBURGER MENU
 -------------------------------------------------------------------------------------------- Start Menu */
 
@@ -74,8 +73,7 @@ h3 {
   transition: linear 0.5s all; */
 }
 
-.navicon:before,
-.navicon:after {
+.navicon:before, .navicon:after {
   background: #fff;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -212,8 +210,112 @@ h3 {
   transition: linear 0.5s all;
 }
 
-
 /* _________________________________________________________________________________________ end Menu */
+
+/* SECTION WELCOME
+-------------------------------------------------------------------------------------------- Section Welcome */
+
+#titel, #welkom, #counter {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#titel>h1:hover {
+  animation: vergroot 4s;
+  cursor: zoom-in;
+}
+
+@keyframes vergroot {
+  0% {
+    font-size: 36px;
+  }
+  90% {
+    font-size: 64px;
+  }
+  100% {
+    font-size: 36px;
+  }
+}
+
+#titel>h1 {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 24px;
+  text-shadow: 4px 4px 4px grey;
+}
+
+#welkom>div {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 24px;
+  max-width: 650px;
+}
+
+#welkom p {
+  text-align: center;
+  margin: 16px;
+}
+
+#opvul {
+  color: rgba(0, 0, 0, 0);
+}
+
+#intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: verdwijn 16s infinite;
+}
+
+#beurs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: verdwijn 16s infinite reverse;
+}
+
+@keyframes verdwijn {
+  0% {
+    color: rgba(255, 255, 255, 0);
+  }
+  10% {
+    color: rgba(255, 255, 255, 1);
+  }
+  45% {
+    color: rgba(255, 255, 255, 1);
+  }
+  55% {
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+
+#counter {
+  padding: 4px;
+}
+
+#counter>div {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 4px;
+  width: 80px;
+}
+
+#counter>div>h1 {
+  font-size: 32px;
+  padding: 16px;
+  box-shadow: 4px 2px black;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(100, 100, 200, 0.8), rgba(0, 0, 0, 0.3));
+}
+
+#counter>div>h5 {
+  text-align: center;
+}
+
+/* _________________________________________________________________________________________ end Section Welcome */
 
 
 /*  MEDIA QUERY: for-phone-only
@@ -221,12 +323,10 @@ h3 {
 
 @media (max-width: 599px) {}
 
-
 /*  MEDIA QUERY: for-tablet-portrait-up
 -------------------------------------------------------------------------------------------- min-width: 600px */
 
 @media (min-width: 600px) {}
-
 
 /*  MEDIA QUERY: for-tablet-landscape-up
 -------------------------------------------------------------------------------------------- min-width: 900px */
@@ -273,18 +373,15 @@ h3 {
   .toggle__menu li a {
     font-size: 13px;
   }
-  .social,
-  .small {
+  .social, .small {
     display: none;
   }
 }
-
 
 /*  MEDIA QUERY: for-desktop-up
 -------------------------------------------------------------------------------------------- min-width: 1200px */
 
 @media (min-width: 1200px) {}
-
 
 /*  MEDIA QUERY: for-big-desktop-up
 -------------------------------------------------------------------------------------------- min-width: 1800px */
