@@ -8,8 +8,27 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
     <title>The Scriptors Meet &amp; Greet</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 </head>
+<style>
+    #section7{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* align-content: center; */
+    }
+    #frmContact{
+        flex-grow: 1;
+        width: 45%;
+        background: #000;
+    }
+    #geg{
+        lex-grow: 1;
+        width: 45%;
+        background: #fff;
+    }
 
+</style>
 <body>
     <!-- <div id="wrapper"> -->
 
@@ -118,7 +137,7 @@
         Partners
     </section>
     <section id="section7">
-        <div id="contact-form">
+        <!-- <div id="contact-form"> -->
             <form action="scripts/contact.php" method="POST" name="frmContact" id="frmContact" class="frmContact" novalidate>
                 <div class="control-group">
                     <div class="form-group">
@@ -159,11 +178,35 @@
                 <button type="submit" id="btnContactFrm" class="btnContactFrm">Verstuur</button>
             </form>
             <div id="success"></div>
-        </div>
+        <!-- </div> -->
+        <div class="geg" id="geg">         
+                <div class="row">
+                  <div class="gegItem" >
+                    <p><i class="fa fas fa-phone-volume fa-2x"></i></p>
+                    <h5><strong>Telefoon</strong></h5>
+                    <p><a href="tel:+3233699303"> 03 369 93 03</a></p>
+                  </div>
+                </div>
+                <div class="row brd">
+                  <div class="gegItem" >
+                    <p><i class="fa fas fa-map-marker-alt fa-2x"></i></p>
+                    <h5><strong>Locatie</strong></h5>
+                     <p>Boombekelaan 18 / 2660 Antwerpen (België)</p>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="gegItem" >
+                    <p><i class="fa fas fa-envelope fa-2x"></i></p>
+                    <h5><strong>E-mail</strong></h5>
+                    <p><a href="mailto:philipsenwout@outlook.com"> info@betavzw.org</a></p>
+                  </div>
+                </div>
+              </div>
     </section>
     <footer>Footer</footer>
     <!-- </div> -->
 </body>
 <script src="scripts/app.js"></script>
+
 
 </html>
