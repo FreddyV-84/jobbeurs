@@ -347,7 +347,7 @@ section {
 /* SECTION STUDENTS
 -------------------------------------------------------------------------------------------- Section Students */
 #cursisten-container {
-  width: 640px;
+  max-width: 640px;
   margin: 0 auto;
   text-align: center;
 }
@@ -371,6 +371,7 @@ section {
 .cursisten-Gfoto {
   display: none;
   margin: 0 auto;
+  width: 100%;
 }
 
 #cursisten-infoTekst {
