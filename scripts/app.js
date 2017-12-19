@@ -47,6 +47,7 @@ function scrollTo(elementTop) {
     });
 }
 
+
 /* SECTION WELCOME
 -------------------------------------------------------------------------------------------- Section Welcome */
 function maakCounter(d, t) {
