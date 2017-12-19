@@ -31,7 +31,7 @@ section {
 /* HAMBURGER MENU
 -------------------------------------------------------------------------------------------- Start Menu */
 
-h1 {
+#menu h1 {
   color: #db5523;
   font-weight: 300;
   text-transform: uppercase;
@@ -40,7 +40,7 @@ h1 {
   margin: 20px 5px 0 0;
 }
 
-h3 {
+#menu h3 {
   color: #db5523;
   text-align: right;
   font-weight: 900;
