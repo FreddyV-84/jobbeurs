@@ -213,23 +213,24 @@ section {
 }
 
 #section7 {
-  display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: center;
   /* align-content: center; */
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
 }
 
-#frmContact {
-  flex-grow: 1;
-  width: 45%;
-}
 
-#geg {
-  lex-grow: 1;
-  width: 45%;
 }
-
 #btnContactFrm {}
+
+
 
 
 /* _________________________________________________________________________________________ end Menu */
@@ -410,6 +411,10 @@ section {
 }
 
 
+
+
+
+
 /* _________________________________________________________________________________________ end Section Students */
 
 
@@ -429,6 +434,18 @@ section {
 -------------------------------------------------------------------------------------------- min-width: 900px */
 
 @media (min-width: 900px) {
+
+  /*------ contact_start ---- */
+  #frmContact {
+    flex-grow: 1;
+    width: 45%;
+  }
+  
+  #geg {
+    lex-grow: 1;
+    width: 45%;
+  }
+  /*----- _End_contact--------*/
   #menu {
     height: 80px;
   }
