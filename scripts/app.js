@@ -52,7 +52,7 @@ function scrollTo(elementTop) {
 function maakCounter(d, t) {
     var tijd = Date.parse(d + "T" + t)
     counter.innerHTML = "<div id='dag'></div><div id='uur'></div><div id='min'></div><div id='sec'></div>";
-    blok = 4;
+    var blok = 4;
     setInterval(zetCounter, 1000);
     function zetCounter() {
         var t = tijd - Date.now();
