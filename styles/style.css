@@ -212,6 +212,22 @@ h3 {
   transition: linear 0.5s all;
 }
 
+#section7{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-content: center; */
+}
+#frmContact{
+  flex-grow: 1;
+  width: 45%;
+  background: #000;
+}
+#geg{
+  lex-grow: 1;
+  width: 45%;
+  background: #fff;
+}
 
 /* _________________________________________________________________________________________ end Menu */
 
