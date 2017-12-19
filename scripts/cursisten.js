@@ -3,6 +3,14 @@
 
 let fotoI = 1; // globale variabele die huidig getoonde image(waarde) bevat (wordt aangepast in functies)
 
+function Cursist() {
+    this.naam;
+    this.voornaam;
+    this.eMail;
+    this.img;
+    
+}
+
 window.onload = function () {
     buildImages(10); // foto's toevoegen
     showImg(fotoI); // eerste foto in de rij moet getoond worden bij laden pagina
