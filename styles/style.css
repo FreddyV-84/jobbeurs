@@ -210,7 +210,6 @@ section {
   transition: linear 0.5s all;
 }
 
-<<<<<<< HEAD
 #section7{
   display: flex;
   flex-wrap: wrap;
@@ -220,16 +219,15 @@ section {
 #frmContact{
   flex-grow: 1;
   width: 45%;
-  background: #000;
 }
 #geg{
   lex-grow: 1;
   width: 45%;
-  background: #fff;
+}
+#btnContactFrm{
+  
 }
 
-=======
->>>>>>> 0e9185579ffdf0e252642ded0f8d866fe4c0f407
 /* _________________________________________________________________________________________ end Menu */
 
 /* SECTION WELCOME
