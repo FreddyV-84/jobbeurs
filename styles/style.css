@@ -296,13 +296,20 @@ section {
 -------------------------------------------------------------------------------------------- Section Students */
 
 #cursisten-container {
-  max-width: 640px;
+  width: 90%;
   margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "klein klein"
+    "groot groot"
+    "tekst tekst"
+    "link link"
 }
 
 #cursisten-kleineFotos {
-  width: 100%;
+  grid-area: klein;
 }
 
 .cursisten-Kfoto {
@@ -313,8 +320,8 @@ section {
 }
 
 #cursisten-groteFotos {
-  width: 100%;
   position: relative;
+  grid-area: groot;
 }
 
 .cursisten-Gfoto {
@@ -324,12 +331,13 @@ section {
 }
 
 #cursisten-infoTekst {
-  width: 100%;
+  grid-area: tekst;
   text-align: justify;
+  padding: 0 20px;
 }
 
 #cursisten-infoLinks {
-  width: 100%;
+  grid-area: link;
 }
 
 #cursisten-infoLinks>img {
@@ -345,6 +353,8 @@ section {
   transform: translate(0%, -50%);
   -ms-transform: translate(-0%, -50%);
   display: block;
+  width: 50px;
+  height: 50px;
 }
 
 #button-right {
@@ -354,6 +364,8 @@ section {
   transform: translate(0%, -50%);
   -ms-transform: translate(-0%, -50%);
   display: block;
+  width: 50px;
+  height: 50px;
 }
 
 
@@ -457,6 +469,13 @@ section {
     display: none;
   }
   /* SECTION STUDENTS */
+  #cursisten-container {
+    grid-template-areas: 
+      "klein klein"
+      "groot tekst"
+      "link link"
+  }
+
   #button-left {
     display: none;
   }
