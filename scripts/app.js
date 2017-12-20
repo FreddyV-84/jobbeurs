@@ -121,7 +121,7 @@ function maakCounter(d, t) {
     }
 
     function eindCounter() {
-        beurs.innerHTML = "<br><p>Wij hopen dat u op onze jobbeurs van donderdag 25 januari bent geweest en dat u ervan genoten heeft.</p><br><p>Nog interesse?</p><p>Neem gerust contact.</p>"
+        beurs.innerHTML = "<p>Mocht u op onze jobbeurs van donderdag 25 januari geweest zijn dan hopen we dat u ervan genoten heeft.</p><p>U kunt nog altijd een kijkje nemen naar onze CV onder het topic Cursisten.</p><p>Neem gerust contact.</p>"
     }
 }
 
