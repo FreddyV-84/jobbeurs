@@ -5,7 +5,7 @@ $bedrijfNaam=$_POST['bedrijfNaam'];
 $tel=$_POST['tel'];
 $berichtFrm=$_POST['berichtFrm'];
 $headers = 'From: '.$email."\r\n".
-// $email_to = "olifirenko88@gmail.com";
+ //$email_to = "olifirenko88@gmail.com";
 $email_to = "philipsenwout@outlook.com";
 $email_subject = "Contact van ".$naam;
 $tekst="Naam: ".$naam."\nE-mail: ".$email."\nBedrijf: ".$bedrijfNaam."\nTelefoon: ".$tel."\nBericht: ".$berichtFrm;
@@ -16,5 +16,4 @@ $tekst="Naam: ".$naam."\nE-mail: ".$email."\nBedrijf: ".$bedrijfNaam."\nTelefoon
  exit();
 //  mail($data);
 // echo"Uw bericht werd verstuurd.";
-
 ?>
