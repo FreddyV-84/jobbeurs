@@ -8,14 +8,23 @@
         Menu hover:         #db5523
         ...
 -------------------------------------------------------------------------------------------- */
-
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  width: 100%;
-  font-family: 'Raleway', sans-serif;
+  /*width: 100%;*/
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  background-color: #00263c;
-  color: #98c3da;
+  background-color:  #1c4354;/* #00263c;*/
+  background: url(../img/bg_section1.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  /*background-size: cover;*/
+  /*background-color:  #1c4354;*//* #00263c;*/
+  background-color:  #1c4354;
+  color: #f1f1f1;
 }
 
 section {
@@ -23,26 +32,62 @@ section {
   text-align: center;
   padding: 0;
   margin: 0;
-  background: linear-gradient(to bottom, #1e5575 0%, #00263c 100%);
+  /*background: #1c4354*//*linear-gradient(to bottom,1e5575 0%, #00263c 100%);*/
 }
+h1{
+  
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 0;
+  color: #fff;
+}
+h2{
+  
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0;
+  color: #fff;
+}
+h5{
+  
+  color:#fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: 300;
+  
+}
+.devider{
+  margin:0 auto;
+  width:46px;
+  height: 3px;
+  background: #ffd62e;
 
-
+}
+.devider_left{
+  width:46px;
+  height: 3px;
+  background: #ffd62e;
+}
 /* HAMBURGER MENU
--------------------------------------------------------------------------------------------- Start Menu */
+---------------------------------------------------------
+----------------------------------- Start Menu */
 
 #menu h1 {
-  color: #db5523;
-  font-weight: 300;
+  color: #fff;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 26px;
   text-align: right;
   margin: 20px 5px 0 0;
 }
 
 #menu h3 {
-  color: #db5523;
+  color: #fff;
   text-align: right;
-  font-weight: 900;
+  font-weight: 300;
+  font-style: italic;
   font-size: 15px;
   margin: 5px 5px 0 0;
 }
@@ -108,6 +153,7 @@ section {
   top: 15px;
   -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
+  background: #ffd62e;
 }
 
 .navicon--active:after {
@@ -121,7 +167,7 @@ section {
   position: fixed;
   margin: 0;
   width: 30%;
-  background-color: rgb(187, 187, 187);
+  background-color: rgb(26, 48, 59,1);
   padding: 15px;
   opacity: 0;
   -webkit-transition: ease-in 0.5s all;
@@ -147,7 +193,7 @@ section {
 }
 
 .toggle__menu {
-  padding: 0 30px;
+  padding: 0 30px 0 30px;
 }
 
 .toggle__menu li {
@@ -157,16 +203,16 @@ section {
 
 .toggle__menu li a {
   text-decoration: none;
-  color: #000;
+  color: #ffd62e;
   display: block;
   text-align: right;
   font-size: 17px;
   line-height: 15px;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
-  -webkit-transition: linear 0.5s all;
-  transition: linear 0.5s all;
-  font-weight: 500;
+  /*-webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;*/
+  font-weight: 400;
   padding: 5px 0;
 }
 
@@ -175,12 +221,12 @@ section {
 }
 
 .toggle__menu li a:hover {
-  color: #db5523;
-  border-bottom: 2px solid #db5523;
+  color: #ccc;
+  /*border-bottom: 2px solid #db5523;
   -webkit-transition: linear 0.5s all;
   transition: linear 0.5s all;
   -webkit-transform: scale(1.15);
-  transform: scale(1.15);
+  transform: scale(1.15);*/
   font-weight: 700;
 }
 
@@ -207,28 +253,34 @@ section {
 }
 
 .social li a:hover {
-  color: #db5523;
+  color: #ffd62e;
   -webkit-transition: linear 0.5s all;
   transition: linear 0.5s all;
 }
-
-#section7 {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* align-content: center; */
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
+#section7{
+  background-color:  #1c4354;/* url(../img/bg_section1.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;*/
 }
-
-
+#section2, #section3{
+  background-color:  #eee;
+  color:#303b41;
+  padding-top:20px;
+  padding-bottom:12px;
 }
-#btnContactFrm {}
+#section4{
+  background-color:  #eee;
+  color:#303b41;
+  padding-top:0px;
+  padding-bottom:12px;
+}
+.dark{
+  padding-top:10px;
+  padding-bottom:2px;
+  color: #303b41;
+  line-height: 20px;
+}
 
 
 
@@ -238,7 +290,9 @@ section {
 
 /* SECTION WELCOME
 -------------------------------------------------------------------------------------------- Section Welcome */
-
+#section1{
+  background-color: rgb(26, 48, 59,0.7);
+}
 #titel,
 #welkom,
 #counter {
@@ -248,45 +302,57 @@ section {
 }
 
 #titel>h1 {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 8px 24px;
-  text-shadow: 4px 4px 4px grey;
+  padding: 48px 24px 0px 24px;
+  
 }
 
-#welkom>div {
+#welkom>h4 {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 8px 8px;
+  padding: 8px 18px;
 }
-
-#welkom p {
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+#welkom h4 {
+  
   text-align: center;
-  margin: 16px;
+  
 }
-
+#datumMGMob .dun{
+  font-weight: 300;
+  font-style: italic;
+  font-size: 25px;
+  letter-spacing: 1px;
+  
+}
+#datumMG{display:none;}
 #counter {
-  padding: 4px 0;
-  width: 100%;
+  
+    background: #ffd62e;
+    padding-top:16px;
+    padding-bottom: 16px;
+  
 }
 
-#counter>div {
-  display: inline-block;
-  padding: 0 8px;
-  margin: 4px;
-  max-width: 80px;
-}
 
-#counter>div>h1 {
-  font-size: 32px;
-  padding: 16px;
-  box-shadow: 4px 2px black;
+.tt{
+  line-height:12px;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: italic;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  width: 80px;
 }
 
-#counter>div>h5 {
+.tg {
+  font-size: 2em;
   text-align: center;
+  width:80px;
+  font-weight:  700px;
 }
+
 
 
 /* _________________________________________________________________________________________ end Section Welcome */
@@ -310,11 +376,12 @@ section {
 
 #cursisten-kleineFotos {
   grid-area: klein;
+  padding-bottom: 12px;
 }
 
 .cursisten-Kfoto {
   display: inline-block;
-  width: 18%;
+  width: 20%;
   cursor: pointer;
   opacity: 0.4;
 }
@@ -333,7 +400,7 @@ section {
 #cursisten-infoTekst {
   grid-area: tekst;
   text-align: justify;
-  padding: 0 20px;
+  padding: 0 0px;
 }
 
 #cursisten-infoLinks {
@@ -367,9 +434,80 @@ section {
   width: 50px;
   height: 50px;
 }
+/*---   SECTION 7   ----------------------------------------------------------*/
+#section7 {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-content: center; */
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  width:90%;
+  margin:0 auto;
+}
+form{
+  width:100%;
+  
+  
+  
+}
 
+#naam, #email, #bedrijfsnaam, #bedrijfNaam, #tel, #berichtFrm{
+  border:0;
+  padding:10px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+}
+#naam:required , #email:required , #bedrijfsnaam:required , #bedrijfNaam:required , #tel:required , #berichtFrm:required ,#btnContactFrm:required  {
+  border-left:6px solid #ffd62e;
+  
+}
+#btnContactFrm {
+  border:0;
+  padding:10px;
+  width: 100%;
+  margin-bottom: 26px;
+  text-transform: uppercase;
+  color:#fff;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 3px;
+}
 
+#btnContactFrm {
+  background-color: #ffd62e;
+  padding: 12px 20px 10px 20px;
+  border: 2px solid #ffd62e;
+  min-width: 200px;
+  font-family: 'Lato', sans-serif;
+  
+  
+}
+#section7 a{
+  text-decoration: none;
+  color:#ffd62e;
+  letter-spacing: 1px;
+  /*line-height: 20px;*/
+  margin:0px;
+}
 
+h5{
+
+  color:#fff;
+  padding-bottom: 0px;
+  line-height: 11px;
+  margin:50px 0 0 0;
+}
 
 
 
@@ -379,32 +517,81 @@ section {
 /*  MEDIA QUERY: for-phone-only
 -------------------------------------------------------------------------------------------- max-width: 599px */
 
-@media (max-width: 599px) {}
+@media (max-width: 599px) {
+
+  
+
+}
 
 
 /*  MEDIA QUERY: for-tablet-portrait-up
 -------------------------------------------------------------------------------------------- min-width: 600px */
 
 @media (min-width: 600px) {
+  /*---section1--------*/
+  #date_welkom{
+    margin:0 auto;
+    display:grid;
+    width: 80%;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 20% auto;
+    
+    /*justify-items: center;*/
+  }
+  #datumMGMob{
+    display:none;
+  }
+  #datumMG{
+    display: inline-block;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: right;
+    padding-right:15px;
+  }
+  div#datumMG>div.super{
+    padding-top:50px;
+    
+    font-weight: 300;
+    font-style: italic;
+    font-size: 80px;
+    line-height: 70px;
+    
+  }
+  .dun{
+    
+    font-weight: 300;
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+  div#titel{
+    justify-content: left;
+    margin:0px;
+    
 
-  /*------ counter ---- */
-  #counter {
-    margin: 32px 4px;
+    
   }
-  #counter>div {
-    max-width: 134px;
-  }
-  #counter>div>h1 {
-    display: inline;
-    padding: 12px;
-  }
-  #counter>div>h5 {
-    display: inline;
+  
+  div#titel>h1 {
+    float: left;
+    font-size: 38px;
     text-align: left;
-    margin: 0 8px;
-    font-size: 0.8em;
+    padding: 8px;
+    padding-top: 16px;
+    margin-bottom: 0px;
+    
+  }
+  div#welkom h4{
+    text-align: left;
+    padding: 0px 8px 30px 8px;
+    margin: 0px;
   }
 }
+
+ 
+
 
 
 /*  MEDIA QUERY: for-tablet-landscape-up
@@ -419,42 +606,45 @@ section {
   }
   
   #geg {
-    lex-grow: 1;
+    flex-grow: 1;
     width: 45%;
   }
   /*----- _End_contact--------*/
   #menu {
-    height: 80px;
+    height: 100px;
   }
+  #menu h1{margin: 20px 50px 0px 20px;}
+  #menu h3{margin-right: 50px;margin-top: -5px;}
   .navicon {
     display: none;
   }
   .toggle {
+    background-color: rgb(26, 48, 59,0.9);
     transform: unset;
     opacity: 1;
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-    height: 80px;
+    height: 100px;
     padding: 0;
+    padding-top:2px;
     -webkit-transition: unset;
     transition: unset;
   }
   .toggle_header {
     margin-left: 0;
     padding-right: 0;
-    min-width: 170px;
+    padding-top: 8px;
+    min-width: 270px;
   }
-  h1 {
-    font-size: 20px;
-  }
+  
   .toggle__menu {
     margin: 0;
-    padding: 0;
-    flex: 1 0 600px;
+    padding: 0 10px 0 0;
+    flex: 1 1 600px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
     align-items: center;
   }
   .toggle__menu li {
@@ -463,10 +653,98 @@ section {
   }
   .toggle__menu li a {
     font-size: 13px;
+    color: #fff;
+  }
+  .toggle__menu li a:hover {
+    
+    color: #ffd62e;
   }
   .social,
   .small {
     display: none;
+  }
+  /*---section1--------*/
+  #date_welkom{
+    margin:0 auto;
+    display:grid;
+    width: 70%;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 20% auto;
+    
+    /*justify-items: center;*/
+  }
+  #datumMGMob{
+    display:none;
+  }
+  #datumMG{
+    display: inline-block;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: center;
+  }
+  div#datumMG>div.super{
+    padding-top:35px;
+    
+    font-weight: 300;
+    font-style: italic;
+    font-size: 120px;
+    line-height: 110px;
+    
+  }
+  .dun{
+    
+    font-weight: 300;
+    font-style: italic;
+    font-size: 29px;
+    letter-spacing: 6px;
+  }
+  div#titel{
+    justify-content: left;
+    margin:0px;
+    
+
+    
+  }
+  
+  div#titel>h1 {
+    float: left;
+    font-size: 38px;
+    text-align: left;
+    padding: 8px;
+    margin-bottom: 0px;
+    
+  }
+  div#welkom h4{
+    text-align: left;
+    padding: 0px 8px ;
+    margin: 0px;
+  }
+
+  /*------ counter ---- */
+  #counter {
+    padding-top:16px;
+    padding-bottom: 24px;
+    margin-top: 52px;
+    
+  }
+  #counter>div {
+    max-width: 150px;
+    padding-left:10px;
+    padding-right: 8px;
+  }
+  /*#counter>div>div {
+    display: inline;
+    padding: 12px;
+  }*/
+  .tg {
+    font-size: 38px;
+    
+  }
+  .tt {
+    line-height:10px;
+    font-size: 20px;
   }
   /* SECTION STUDENTS */
   #cursisten-container {
@@ -483,7 +761,15 @@ section {
     display: none;
   }
   .cursisten-Kfoto {
-    width: 9%;
+    width: 11.11%;
+  }
+  #cursisten-groteFotos {
+    border-left:6px solid #ffd62e;
+  }
+  
+  #cursisten-infoTekst {
+    
+    padding: 0 20px;
   }
   /* END SECTION STUDENTS */
 }

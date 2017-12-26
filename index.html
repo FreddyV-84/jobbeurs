@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet"> 
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
@@ -72,27 +73,33 @@
         </div>
     </header>
     <section id="section1">
+        <div id="date_welkom">
+        <div id="datumMG"><div class="super">25</div><div class="dun">januari</div></div>
         <div id="titel">
             <h1>THE SCRIPTORS</h1>
         </div>
+        <div id="datumMGMob"><div class="dun">25 januari</div></div>
         <div id="welkom">
-            <div>
-                <div id="beurs">
+            <h4>Via deze site kan u zich inschrijven voor onze jobbeurs.
+                U kunt alvast een kijkje nemen naar onze CV onder het topic Cursisten.</br>
+                Hopelijk tot dan!</h4>
+                <!--<div id="beurs">
                     <p>Via deze site kan u zich inschrijven voor onze jobbeurs.</p>
                     <p>U kunt alvast een kijkje nemen naar onze CV onder het topic Cursisten.</p>
                     <p>Hopelijk tot dan!</p>
-                </div>
-            </div>
-        </div>
+                </div>-->
+            
+        </div></div>
         <div id="counter"></div>
     </section>
     <section id="section2">
-        Programma
+        <h2 class="dark">Programma</h2>
     </section>
     <section id="section3">
-        Onze Opleiding
+            <h2 class="dark">Onze Opleiding</h2>
     </section>
     <section id="section4">
+        
         <div id="cursisten-container">
             <!--Full res versie
                 9 kleine foto's (full length 1 foto)
@@ -102,13 +109,15 @@
             <div id="cursisten-kleineFotos">
                 <!-- zie JavaScript -->
             </div>
+            
             <div id="cursisten-groteFotos">
                 <!-- zie JavaScript -->
                 <button id="button-left">&#10094;</button>
                 <button id="button-right">&#10095;</button>
             </div>
             <div id="cursisten-infoTekst">
-                <h2 id="infoTitel">Lorem Ipsum</h2>
+                <h2 id="infoTitel" class="dark">Lorem Ipsum</h2>
+                <div class="devider_left"></div>
                 <p id="infoTekst">Lorem ipsum dolor sit</p>
             </div>
             <div id="cursisten-infoLinks">
@@ -118,14 +127,16 @@
         </div>
     </section>
     <section id="section5">
-        Inschrijvingsformulier
+        
     </section>
     <section id="section6">
-        Partners
+            
     </section>
     <section id="section7">
+        
         <!-- <div id="contact-form"> -->
         <form action="scripts/contact.php" method="POST" name="frmContact" id="frmContact" class="frmContact" novalidate>
+            <h2>Inschrijvingsformulier</h2>
             <div class="control-group">
                 <div class="form-group">
                     <div class="controls">
@@ -158,50 +169,40 @@
             <div class="control-group">
                 <div class="form-group">
                     <div class="controls">
-                        <textarea name="berichtFrm" id="berichtFrm" cols="30" rows="10" class="form-control" placeholder="Bericht" required data-validation-required-message="Bericht ontbreekt"></textarea>
+                        <textarea name="berichtFrm" id="berichtFrm" rows="4" class="form-control" placeholder="Bericht" required data-validation-required-message="Bericht ontbreekt"></textarea>
                     </div>
                 </div>
             </div>
-            <button type="submit" id="btnContactFrm" class="btnContactFrm">Verstuur</button>
+            <button type="submit" id="btnContactFrm" class="btnContactFrm" >Verstuur</button>
         </form>
         <div id="success"></div>
         <!-- </div> -->
         <div class="geg" id="geg">
             <div class="row">
                 <div class="gegItem">
-                    <p>
-                        <i class="fa fas fa-phone-volume fa-2x"></i>
-                    </p>
-                    <h5>
-                        <strong>Telefoon</strong>
-                    </h5>
-                    <p>
-                        <a href="tel:+3233699303"> 03 369 93 03</a>
-                    </p>
+                    
+                    <h5><strong>Telefoon</strong></h5><h2><a href="tel:+3233699303"> 03 369 93 03</a></h2>
+                    <div class="devider"></div>
                 </div>
             </div>
             <div class="row brd">
                 <div class="gegItem">
-                    <p>
+                    <!--<p>
                         <i class="fa fas fa-map-marker-alt fa-2x"></i>
-                    </p>
-                    <h5>
-                        <strong>Locatie</strong>
-                    </h5>
-                    <p>Boombekelaan 18 / 2660 Antwerpen (België)</p>
+                    </p>-->
+                    <h5><strong>Locatie</strong></h5>
+                    <h3>Boombekelaan 18<br/>BE-2660 Antwerpen</h3><div class="devider"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="gegItem">
-                    <p>
+                    <!--<p>
                         <i class="fa fas fa-envelope fa-2x"></i>
-                    </p>
+                    </p>-->
                     <h5>
                         <strong>E-mail</strong>
                     </h5>
-                    <p>
-                        <a href="mailto:philipsenwout@outlook.com"> info@thescriptors.be</a>
-                    </p>
+                    <h3><a href="mailto:philipsenwout@outlook.com"> info@thescriptors.be</a></h2><div class="devider"></div>
                 </div>
             </div>
         </div>
