@@ -176,7 +176,7 @@ h5{
   position: fixed;
   margin: 0;
   width: 30%;
-  background-color: rgb(26, 48, 59,1);
+  background-color: rgb(26, 48, 59);
   padding: 15px;
   opacity: 0;
   -webkit-transition: ease-in 0.5s all;
