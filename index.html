@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
@@ -72,45 +73,78 @@
         </div>
     </header>
     <section id="section1">
-        <div id="titel">
-            <h1>THE SCRIPTORS</h1>
-        </div>
-        <div id="welkom">
-            <div>
-                <div id="opvul">
-                    <br>
-                    <p>Deze tekst is niet om te zien maar dient als opvulling van het tekstblok.</p>
-                    <p>De aftel counter is gemaarkt door Erwin en geeft aan wanneer de beurs start.</p>
-                    <p> De welkom tekst is opgesteld door Tom en in JavaScript bewerkt door Erwin.</p>
-                    <p>Tot ziens op onze jobbeurs</p>
-                    <br>
-                </div>
-                <div id="intro">
-                    <p>Wij zijn 9 leergierige enthousiastelingen, die sinds oktober de opleiding “Javascript front-end ontwikkelaar”
-                        volgen bij de Beta vzw in samenwerking met Cevora en VDAB.</p>
-                    <p>De opleiding omvat naast Javascript, HTML5 en CSS3 nog verschillende andere front-end gerelateerde aspecten.
-                        Een meer gedetailleerde lijst kan u terugvinden onder het topic Skills.</p>
-                    <br>
-                </div>
-                <div id="beurs">
-                    <p>Via deze site kan u zich inschrijven voor onze jobbeurs die zal plaatsvinden op donderdag 25 januari
-                        vanaf 12u30 in de Belpairestraat 39 te Berchem. Het inschrijvingsformulier en programma van deze
-                        dag vindt u hieronder terug.</p>
-                    <p>We werken met speeddates, zodat iedereen aan bod kan komen en u meteen kan inschatten welk profiel het
-                        beste binnen uw bedrijf past. U kan alvast een kijkje nemen naar onze CV onder het topic Cursisten.</p>
+        <div id="date_welkom">
+            <div id="datumMG">
+                <div class="super">25</div>
+                <div class="dun">januari</div>
+            </div>
+            <div id="titel">
+                <h1>THE SCRIPTORS</h1>
+            </div>
+            <div id="datumMGMob">
+                <div class="dun">25 januari</div>
+            </div>
+            <div id="welkom">
+                <h4>Via deze site kan u zich inschrijven voor onze jobbeurs. U kunt alvast een kijkje nemen naar onze CV onder
+                    het topic Cursisten. Hopelijk tot dan!</h4>
+                <!--<div id="beurs">
+                    <p>Via deze site kan u zich inschrijven voor onze jobbeurs.</p>
+                    <p>U kunt alvast een kijkje nemen naar onze CV onder het topic Cursisten.</p>
                     <p>Hopelijk tot dan!</p>
-                </div>
+                </div>-->
+            </div>
+            <div id="btnInschr">
+                <input type="button" class="btnEmptyYellow" value="Inschrijven" />
             </div>
         </div>
         <div id="counter"></div>
     </section>
     <section id="section2">
-        Programma
+        <div id="planning-container">
+            <div id="planning-titel"><h2 class="dark">Programma 25 januari</h2></div>
+            <table>
+                <tr>
+                    <td>13u00</td>
+                    <td>Verwelkoming en presentatie</td>
+                </tr>
+                <tr>
+                    <td>13u30</td>
+                    <td>De bedrijven stellen zich kort voor</td>
+                </tr>
+                <tr>
+                    <td>14u00</td>
+                    <td>Speeddate</td>
+                </tr>
+                <tr>
+                    <td>15u30</td>
+                    <td>Vrije gesprekken tussen bedrijven en cursisten</td>
+                </tr>
+                <tr>
+                    <td>16u30</td>
+                    <td>Dankwoord</td>
+                </tr>
+            </table>
+        </div>
     </section>
     <section id="section3">
-        Onze Opleiding
+        <div id="section3_prog">
+            <div id="programma-container">
+                <div id="prog_omschr">
+                    <h2 class="dark">Onze Opleiding</h2>
+                    <div class="devider_left"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+                        felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 1
+                    </p>
+                </div>
+                <div id="prog_schema">
+                    <img src="img/cirkel_tiny.png" alt="Inhoud onze opleiding bij Beta" />
+                </div>
+            </div>
+        </div>
     </section>
     <section id="section4">
+
         <div id="cursisten-container">
             <!--Full res versie
                 9 kleine foto's (full length 1 foto)
@@ -120,30 +154,43 @@
             <div id="cursisten-kleineFotos">
                 <!-- zie JavaScript -->
             </div>
+
             <div id="cursisten-groteFotos">
                 <!-- zie JavaScript -->
                 <button id="button-left">&#10094;</button>
                 <button id="button-right">&#10095;</button>
             </div>
             <div id="cursisten-infoTekst">
-                <h2 id="infoTitel">Lorem Ipsum</h2>
+                <!-- NIEUWE COTACTEN PER CURSIST-->
+                <div id="cursisten-contacts">
+                    <i class="fas fa-envelope-square fa-2x"></i>
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </div>
+                <!--einde NIEUWE CONTACTEN-->
+                <h2 id="infoTitel" class="dark">Lorem Ipsum</h2>
+                <div class="devider_left"></div>
                 <p id="infoTekst">Lorem ipsum dolor sit</p>
             </div>
             <div id="cursisten-infoLinks">
+
+                <!-- OUDE CONTACTEN
                 <img src="./img/cursisten/cv.svg" alt="">
                 <img src="./img/cursisten/linkedin.svg" alt="">
+                -->
             </div>
         </div>
     </section>
     <section id="section5">
-        Inschrijvingsformulier
+
     </section>
     <section id="section6">
-        Partners
+
     </section>
     <section id="section7">
+
         <!-- <div id="contact-form"> -->
         <form action="scripts/contact.php" method="POST" name="frmContact" id="frmContact" class="frmContact" novalidate>
+            <h2>Inschrijvingsformulier</h2>
             <div class="control-group">
                 <div class="form-group">
                     <div class="controls">
@@ -176,7 +223,7 @@
             <div class="control-group">
                 <div class="form-group">
                     <div class="controls">
-                        <textarea name="berichtFrm" id="berichtFrm" cols="30" rows="10" class="form-control" placeholder="Bericht" required data-validation-required-message="Bericht ontbreekt"></textarea>
+                        <textarea name="berichtFrm" id="berichtFrm" rows="4" class="form-control" placeholder="Bericht" required data-validation-required-message="Bericht ontbreekt"></textarea>
                     </div>
                 </div>
             </div>
@@ -187,39 +234,41 @@
         <div class="geg" id="geg">
             <div class="row">
                 <div class="gegItem">
-                    <p>
-                        <i class="fa fas fa-phone-volume fa-2x"></i>
-                    </p>
+
                     <h5>
                         <strong>Telefoon</strong>
                     </h5>
-                    <p>
+                    <h2>
                         <a href="tel:+3233699303"> 03 369 93 03</a>
-                    </p>
+                    </h2>
+                    <div class="devider"></div>
                 </div>
             </div>
             <div class="row brd">
                 <div class="gegItem">
-                    <p>
+                    <!--<p>
                         <i class="fa fas fa-map-marker-alt fa-2x"></i>
-                    </p>
+                    </p>-->
                     <h5>
                         <strong>Locatie</strong>
                     </h5>
-                    <p>Boombekelaan 18 / 2660 Antwerpen (België)</p>
+                    <h3>Boombekelaan 18
+                        <br/>BE-2660 Antwerpen</h3>
+                    <div class="devider"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="gegItem">
-                    <p>
+                    <!--<p>
                         <i class="fa fas fa-envelope fa-2x"></i>
-                    </p>
+                    </p>-->
                     <h5>
                         <strong>E-mail</strong>
                     </h5>
-                    <p>
+                    <h3>
                         <a href="mailto:philipsenwout@outlook.com"> info@thescriptors.be</a>
-                    </p>
+                    </h3>
+                    <div class="devider"></div>
                 </div>
             </div>
         </div>

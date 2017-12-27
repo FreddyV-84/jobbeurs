@@ -45,7 +45,7 @@ function initSectionWelcome() {
 }
 
 function initSectionStudents() {
-    buildImages(10); // foto's toevoegen
+    buildImages(9); // foto's toevoegen
     showImg(fotoI); // eerste foto in de rij moet getoond worden bij laden pagina
     currentImg(); // functie die via "onclick" op kleine foto's gebruiker laat kiezen
     hover(); //functie voor hover-effect op grote foto's
@@ -74,6 +74,7 @@ function scrollTo(elementTop) {
 /* _________________________________________________________________________________________ end Menu */
 
 
+
 /* SECTION WELCOME
 -------------------------------------------------------------------------------------------- Section Welcome */
 function maakCounter(d, t) {
@@ -90,7 +91,7 @@ function maakCounter(d, t) {
                 dag.style.display = "none";
                 blok = 3;
             }
-            dag.innerHTML = "<h1>" + d + "</h1><h5>" + (d == 0 ? '&nbsp' : d == 1 ? 'DAG' : 'DAGEN') + "</h5>";
+            dag.innerHTML = "<div class='tg'>" + d + "</div><div class='tt'>" + (d == 0 ? '&nbsp' : d == 1 ? 'dag' : 'dagen') + "</div>";
         }
         if (blok > 2) {
             var u = (Math.floor(t / 3600000)) % 24;
@@ -98,7 +99,7 @@ function maakCounter(d, t) {
                 uur.style.display = "none";
                 blok = 2;
             }
-            uur.innerHTML = "<h1>" + u + "</h1><h5>" + (u == 1 ? 'UUR' : 'UREN') + "</h5>";
+            uur.innerHTML = "<div class='tg'>" + u + "</div><div class='tt'>" + (u == 1 ? 'uur' : 'uren') + "</div>";
         }
         if (blok > 1) {
             var m = (Math.floor(t / 60000)) % 60;
@@ -106,7 +107,7 @@ function maakCounter(d, t) {
                 min.style.display = "none";
                 blok = 1;
             }
-            min.innerHTML = "<h1>" + m + "</h1><h5>" + (m == 1 ? 'MINUUT' : 'MINUTEN') + "</h5>";
+            min.innerHTML = "<div class='tg'>" + m + "</div><div class='tt'>" + (m == 1 ? 'minuut' : 'minuten') + "</div>";
         }
         if (blok > 0) {
             var s = (Math.floor(t / 1000)) % 60;
@@ -115,12 +116,12 @@ function maakCounter(d, t) {
                 blok = 0;
                 eindCounter();
             }
-            sec.innerHTML = "<h1>" + s + "</h1><h5>" + (s == 1 ? 'SECONDE' : 'SECONDEN') + "</h5>";
+            sec.innerHTML = "<div class='tg'>" + s + "</div><div class='tt'>" + (s == 1 ? 'seconde' : 'seconden') + "</div>";
         }
     }
 
     function eindCounter() {
-        beurs.innerHTML = "<br><p>Wij hopen dat u op onze jobbeurs van donderdag 25 januari bent geweest en dat u ervan genoten heeft.</p><br><p>Nog interesse?</p><p>Neem gerust contact.</p>"
+        beurs.innerHTML = "<p>Mocht u op onze jobbeurs van donderdag 25 januari geweest zijn dan hopen we dat u ervan genoten heeft.</p><p>U kunt nog altijd een kijkje nemen naar onze CV onder het topic Cursisten.</p><p>Neem gerust contact.</p>"
     }
 }
 
