@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
@@ -74,15 +74,19 @@
     </header>
     <section id="section1">
         <div id="date_welkom">
-        <div id="datumMG"><div class="super">25</div><div class="dun">januari</div></div>
-        <div id="titel">
-            <h1>THE SCRIPTORS</h1>
-        </div>
-        <div id="datumMGMob"><div class="dun">25 januari</div></div>
-        <div id="welkom">
-            <h4>Via deze site kan u zich inschrijven voor onze jobbeurs.
-                U kunt alvast een kijkje nemen naar onze CV onder het topic Cursisten.
-                Hopelijk tot dan!</h4>
+            <div id="datumMG">
+                <div class="super">25</div>
+                <div class="dun">januari</div>
+            </div>
+            <div id="titel">
+                <h1>THE SCRIPTORS</h1>
+            </div>
+            <div id="datumMGMob">
+                <div class="dun">25 januari</div>
+            </div>
+            <div id="welkom">
+                <h4>Via deze site kan u zich inschrijven voor onze jobbeurs. U kunt alvast een kijkje nemen naar onze CV onder
+                    het topic Cursisten. Hopelijk tot dan!</h4>
                 <!--<div id="beurs">
                     <p>Via deze site kan u zich inschrijven voor onze jobbeurs.</p>
                     <p>U kunt alvast een kijkje nemen naar onze CV onder het topic Cursisten.</p>
@@ -92,7 +96,31 @@
         <div id="counter"></div>
     </section>
     <section id="section2">
-        <h2 class="dark">Programma 25 januari</h2>
+        <div id="planning-container">
+            <div id="planning-titel"><h2 class="dark">Programma 25 januari</h2></div>
+            <table>
+                <tr>
+                    <td>13u00</td>
+                    <td>Verwelkoming en presentatie</td>
+                </tr>
+                <tr>
+                    <td>13u30</td>
+                    <td>De bedrijven stellen zich kort voor</td>
+                </tr>
+                <tr>
+                    <td>14u00</td>
+                    <td>Speeddate</td>
+                </tr>
+                <tr>
+                    <td>15u30</td>
+                    <td>Vrije gesprekken tussen bedrijven en cursisten</td>
+                </tr>
+                <tr>
+                    <td>16u30</td>
+                    <td>Dankwoord</td>
+                </tr>
+            </table>
+        </div>
     </section>
     <section id="section3">
     <div id="section3_prog">
@@ -104,10 +132,9 @@
             </div>
             <div id="prog_schema"><img src="img/cirkel_tiny.png" alt="Inhoud onze opleiding bij Beta"/></div>
         </div>
-    </div>    
     </section>
     <section id="section4">
-        
+
         <div id="cursisten-container">
             <!--Full res versie
                 9 kleine foto's (full length 1 foto)
@@ -117,7 +144,7 @@
             <div id="cursisten-kleineFotos">
                 <!-- zie JavaScript -->
             </div>
-            
+
             <div id="cursisten-groteFotos">
                 <!-- zie JavaScript -->
                 <button id="button-left">&#10094;</button>
@@ -135,7 +162,7 @@
                 <p id="infoTekst">Lorem ipsum dolor sit</p>
             </div>
             <div id="cursisten-infoLinks">
-                
+
                 <!-- OUDE CONTACTEN
                 <img src="./img/cursisten/cv.svg" alt="">
                 <img src="./img/cursisten/linkedin.svg" alt="">
@@ -144,13 +171,13 @@
         </div>
     </section>
     <section id="section5">
-        
+
     </section>
     <section id="section6">
-            
+
     </section>
     <section id="section7">
-        
+
         <!-- <div id="contact-form"> -->
         <form action="scripts/contact.php" method="POST" name="frmContact" id="frmContact" class="frmContact" novalidate>
             <h2>Inschrijvingsformulier</h2>
@@ -190,15 +217,20 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" id="btnContactFrm" class="btnContactFrm" >Verstuur</button>
+            <button type="submit" id="btnContactFrm" class="btnContactFrm">Verstuur</button>
         </form>
         <div id="success"></div>
         <!-- </div> -->
         <div class="geg" id="geg">
             <div class="row">
                 <div class="gegItem">
-                    
-                    <h5><strong>Telefoon</strong></h5><h2><a href="tel:+3233699303"> 03 369 93 03</a></h2>
+
+                    <h5>
+                        <strong>Telefoon</strong>
+                    </h5>
+                    <h2>
+                        <a href="tel:+3233699303"> 03 369 93 03</a>
+                    </h2>
                     <div class="devider"></div>
                 </div>
             </div>
@@ -207,8 +239,11 @@
                     <!--<p>
                         <i class="fa fas fa-map-marker-alt fa-2x"></i>
                     </p>-->
-                    <h5><strong>Locatie</strong></h5>
-                    <h3>Boombekelaan 18<br/>BE-2660 Antwerpen</h3>
+                    <h5>
+                        <strong>Locatie</strong>
+                    </h5>
+                    <h3>Boombekelaan 18
+                        <br/>BE-2660 Antwerpen</h3>
                     <div class="devider"></div>
                 </div>
             </div>
@@ -220,7 +255,9 @@
                     <h5>
                         <strong>E-mail</strong>
                     </h5>
-                    <h3><a href="mailto:philipsenwout@outlook.com"> info@thescriptors.be</a></h3>
+                    <h3>
+                        <a href="mailto:philipsenwout@outlook.com"> info@thescriptors.be</a>
+                    </h3>
                     <div class="devider"></div>
                 </div>
             </div>
