@@ -11,6 +11,9 @@
 *{
   box-sizing: border-box;
 }
+a{
+  cursor: pointer;
+}
 body {
   margin: 0;
   /*width: 100%;*/
@@ -68,6 +71,7 @@ h5{
   background: #ffd62e;
 }
 .btnEmptyYellow{
+  cursor: pointer;
   background-color: rgb(26, 48, 59,0.3);
   padding: 10px 20px 9px 20px;
   border: 2px solid #ffd62e;
@@ -79,6 +83,9 @@ h5{
   font-family: 'Lato', sans-serif;
   color:#ffd62e;
 }
+.btnEmptyYellow:hover{
+  color:#0e3647;
+  background-color: #ffd62e;}
 /* HAMBURGER MENU
 ---------------------------------------------------------
 ----------------------------------- Start Menu */
@@ -359,10 +366,18 @@ h4 {
   width:80px;
   font-weight:  700px;
 }
-#btnEmptyYellow{
+ #btnEmptyYellow {
   margin-bottom: 40px;
 }
+#btnInschr>a{
+  text-decoration: none;
+}
 
+#btnInschr>a:hover{
+  text-decoration: none;
+  
+
+}
 
 /* _________________________________________________________________________________________ end Section Welcome */
 
@@ -440,6 +455,7 @@ h4 {
   float:right;
   padding-top:10px;
   letter-spacing: 0.5em;
+  cursor: pointer;
 }
 
 
@@ -529,6 +545,7 @@ form{
 }
 
 #btnContactFrm {
+  cursor: pointer;
   background-color: #ffd62e;
   padding: 12px 20px 10px 20px;
   border: 2px solid #ffd62e;
