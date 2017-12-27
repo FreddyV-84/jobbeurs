@@ -45,7 +45,7 @@ function initSectionWelcome() {
 }
 
 function initSectionStudents() {
-    buildImages(10); // foto's toevoegen
+    buildImages(9); // foto's toevoegen
     showImg(fotoI); // eerste foto in de rij moet getoond worden bij laden pagina
     currentImg(); // functie die via "onclick" op kleine foto's gebruiker laat kiezen
     hover(); //functie voor hover-effect op grote foto's
