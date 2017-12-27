@@ -286,7 +286,7 @@ h5{
   background-color:  #eee;
   color:#303b41;
   padding-top:20px;
-  padding-bottom:12px;
+  padding-bottom:20px;
   
 }
 #section3{
@@ -385,7 +385,41 @@ h5{
 
 }
 
-/* _________________________________________________________________________________________ end Section Welcome */
+/* ___________________________________________________________________ end Section Welcome */
+
+/* SECTION 2 - PROGRAMMA ----------*/
+#planning-container{
+  width:90%;
+  margin:0px auto;
+  text-align: center;
+  line-height: 1.2em;
+  font-size:18px;
+  padding-bottom: 5px;
+}
+#planning-container table{
+  border:0px;
+  margin-top:20px;
+  border-collapse: collapse;
+  width:100%;
+}
+
+#planning-container tr{
+  
+  border:0px;
+}
+#planning-container td{
+  padding:15px;
+  border:0px;
+  border-bottom: 3px solid #eee;
+
+}
+#planning-container td:nth-child(1) { 
+ background: #fefefe;
+ }
+ #planning-container td:nth-child(2) { 
+  text-align: left;
+  background: #fcfcfc;
+  }
 
 
 /* SECTION 3 - OPLEIDING ------------------------------------------------------------------*/
@@ -671,8 +705,26 @@ footer{
    padding: 8px;
  }
 }
+/** SECTION2 - Table **/
+#planning-container table{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+#planning-container td{
+  padding:15px 30px 15px 30px;
+  
+
+}
+#planning-container td:nth-child(1) { 
+ background: #fefefe;
  
+ }
+ #planning-container td:nth-child(2) { 
+  text-align: left;
+  background: #fcfcfc;
+  }
 
 
 /*---------------------------------------------------------------------------------------------*/
@@ -691,7 +743,7 @@ footer{
     display: none;
   }
   .toggle {
-    background-color: rgba(26, 48, 59,0.9);
+    background-color: rgba(26, 48, 59,0.95);
     transform: unset;
     opacity: 1;
     display: flex;
@@ -823,6 +875,11 @@ footer{
   .tt {
     line-height:10px;
     font-size: 20px;
+  }
+
+  /* SECTION 2 - PROGRAMMA ----------*/
+  #planning-container table{
+    width: 70%;
   }
   /* SECTION 3 - OPLEIDING ----------*/
   #opleiding-container {
