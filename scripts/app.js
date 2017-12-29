@@ -29,11 +29,11 @@ function init() {
     // }
 
     for (let i = 0; i < links.length; i++) {
-            links[i].onclick = (e) => {
-                e.preventDefault();
-                toggleMenu();
-                scrollTo(document.getElementById("section" + (i + 1)).offsetTop - headerHeight);
-            }
+        links[i].onclick = (e) => {
+            e.preventDefault();
+            toggleMenu();
+            scrollTo(document.getElementById("section" + (i + 1)).offsetTop - headerHeight);
+        }
     }
 
     initSectionWelcome();
@@ -45,11 +45,7 @@ function initSectionWelcome() {
 }
 
 function initSectionStudents() {
-    buildImages(9); // foto's toevoegen
-    showImg(fotoI); // eerste foto in de rij moet getoond worden bij laden pagina
-    currentImg(); // functie die via "onclick" op kleine foto's gebruiker laat kiezen
-    hover(); //functie voor hover-effect op grote foto's
-    buttons(); // functie die de knoppen bedient
+    getXML();
 }
 
 
@@ -130,21 +126,50 @@ function maakCounter(d, t) {
 
 /* SECTION STUDENTS
 -------------------------------------------------------------------------------------------- Section Students */
-function buildImages(aantal) { // dynamisch toevoegen van de grote en kleine foto's
+//GLOBALE VARIABLE MET XML-DOC
+let cursisten;
+
+function getXML() {
+    let url =
+        "cursisten.xml";
+
+    $.ajax({
+        url: url,
+        dataType: "XML",
+        beforeSend: function () {
+            $("#laadTekst").html("Bezig met laden. Even geduld aub...");
+        },
+        error: function (obj, status, errormessage) {
+            alert("Foto's niet geladen omwille van volgende foutmelding: " + errormessage);
+        }
+    }).done(function (xml) {
+        cursisten = xml;
+        $("#laadTekst").hide();
+        buildImages(); // foto's toevoegen
+        showImg(fotoI); // eerste foto in de rij moet getoond worden bij laden pagina
+        currentImg(); // functie die via "onclick" op kleine foto's gebruiker laat kiezen
+        hover(); //functie voor hover-effect op grote foto's
+        buttons(); // functie die de knoppen bedient
+    });
+}
+
+function buildImages() { // dynamisch toevoegen van de grote en kleine foto's
     let groteBox = document.getElementById("cursisten-groteFotos");
     let kleineBox = document.getElementById("cursisten-kleineFotos");
+    let cursistenList = $(cursisten).find("cursist");
 
-    for (let index = 1; index <= aantal; index++) {
+    //for (let index = 1; index <= cursistenList.length; index++) {
+    cursistenList.each( function() {
         let imgG = document.createElement("img");
         let imgK = document.createElement("img");
 
-        imgK.src = "./img/cursisten/Dummy (" + index + ").jpg";
-        imgG.src = "./img/cursisten/Dummy (" + index + ").jpg";
+        imgK.src = "./img/cursisten/" + $(this).find("image").text();
+        imgG.src = "./img/cursisten/" + $(this).find("image").text();
         imgK.className = "cursisten-Kfoto";
         imgG.className = "cursisten-Gfoto";
         kleineBox.appendChild(imgK);
         groteBox.appendChild(imgG);
-    }
+    });
 }
 
 function hover() {
@@ -152,11 +177,11 @@ function hover() {
 
     for (let index = 0; index < images.length; index++) { // overloop alle foto's in de lijst en doe daar iets mee (this verwijst naar elke foto apart)
         images[index].onmouseover = function () { // wijzig de foto (src van de foto) wanneer je er over gaat
-            this.src = this.src.replace(/(.jpg)/, "b$1"); // zoek naar ".jpg" en zet daar net voor een "b"
+            this.src = this.src.replace(/(.jpg)/, "B.png"); // zoek naar ".jpg" en zet daar net voor een "b"
         }
 
         images[index].onmouseout = function () { // wijzig de foto (src van de foto) wanneer je er af gaat
-            this.src = this.src.replace(/b.jpg/, ".jpg"); // zoek naar een b net voor de ".jpg" en haal deze weg
+            this.src = this.src.replace(/(B.png)/, ".jpg"); // zoek naar een b net voor de ".jpg" en haal deze weg
         }
     }
 }
@@ -190,7 +215,9 @@ function showImg(fotoIndex) { // toont de juiste foto (default: eerste foto) en 
 
     imagesG[fotoI - 1].style.display = "block";
     imagesK[fotoI - 1].style.opacity = "1";
-    changeInfo();
+
+    let cursist = $(cursisten).find("cursist:nth-child(" + fotoI + ")");
+    changeInfo(cursist);
 }
 
 function buttons() { // knoppen (komen pas zichtbaar onder de 900px) functie: volgende en vorige
@@ -201,9 +228,18 @@ function buttons() { // knoppen (komen pas zichtbaar onder de 900px) functie: vo
     btnRight.onclick = () => showImg(fotoI += 1);
 }
 
-function changeInfo() { // toont dynamisch de juiste titel en tekst bij de juiste cursist
-    document.getElementById("infoTitel").textContent = "Cursist " + fotoI;
-    document.getElementById("infoTekst").textContent = fotoI + " Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. " + fotoI
+function changeInfo(cursist) { // toont dynamisch de juiste titel en tekst bij de juiste cursist
+    $("#infoTitel").text(cursist.find("voornaam").text() + " " + cursist.find("naam").text());
+    $("#infoTekst").text(cursist.find("info").text());
+
+    $("#cursist-mail").prop('onclick',null).off('click');
+    $("#cursist-mail").on("click", () => {
+        window.open("mailto:" + cursist.find("email").text());
+    });
+    $("#cursist-in").prop('onclick',null).off('click');
+    $("#cursist-in").on("click", () => {
+        window.open(cursist.find("linkedin").text());
+    });
 }
 
 /* _________________________________________________________________________________________ end Students Section */
