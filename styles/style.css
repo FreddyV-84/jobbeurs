@@ -115,14 +115,6 @@ h5{
   margin: 5px 5px 0 0;
 }
 
-.small {
-  font-size: 12px;
-  text-transform: lowercase;
-  font-weight: 300;
-  text-align: center;
-  display: block;
-}
-
 #menu {
   height: 0;
 }
@@ -252,34 +244,6 @@ h5{
   -webkit-transform: scale(1.15);
   transform: scale(1.15);*/
   font-weight: 700;
-}
-
-.social {
-  display: block;
-  width: 70%;
-  margin: 15px auto;
-  text-align: center;
-  font-size: 0;
-}
-
-.social li {
-  display: inline-block;
-  width: 25%;
-  text-align: center;
-}
-
-.social li a {
-  text-align: center;
-  color: #000;
-  font-size: 25px;
-  -webkit-transition: linear 0.5s all;
-  transition: linear 0.5s all;
-}
-
-.social li a:hover {
-  color: #ffd62e;
-  -webkit-transition: linear 0.5s all;
-  transition: linear 0.5s all;
 }
 
 #section2, #section3{
@@ -782,10 +746,6 @@ footer{
   .toggle__menu li a:hover {
     font-weight: 400;
     color: #ffd62e;
-  }
-  .social,
-  .small {
-    display: none;
   }
   /*---section1--------*/
   #date_welkom{
