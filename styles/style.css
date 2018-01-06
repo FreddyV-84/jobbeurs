@@ -465,6 +465,11 @@ h5{
   cursor: pointer;
 }
 
+#cursisten-contacts a {
+  color: inherit;
+  text-decoration: none;
+}
+
 
 #cursisten-infoLinks {
   grid-area: link;

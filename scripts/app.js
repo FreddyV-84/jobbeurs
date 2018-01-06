@@ -140,6 +140,7 @@ function getXML() {
             $("#laadTekst").html("Bezig met laden. Even geduld aub...");
         },
         error: function (obj, status, errormessage) {
+            console.dir(errormessage);
             alert("Foto's niet geladen omwille van volgende foutmelding: " + errormessage);
         }
     }).done(function (xml) {
@@ -231,11 +232,8 @@ function buttons() { // knoppen (komen pas zichtbaar onder de 900px) functie: vo
 function changeInfo(cursist) { // toont dynamisch de juiste titel en tekst bij de juiste cursist
     $("#infoTitel").text(cursist.find("voornaam").text() + " " + cursist.find("naam").text());
     $("#infoTekst").text(cursist.find("info").text());
+    $("#cursisten-contacts a").prop("href","mailto:" + cursist.find("email").text());
 
-    $("#cursist-mail").prop('onclick',null).off('click');
-    $("#cursist-mail").on("click", () => {
-        window.open("mailto:" + cursist.find("email").text());
-    });
     $("#cursist-in").prop('onclick',null).off('click');
     $("#cursist-in").on("click", () => {
         window.open(cursist.find("linkedin").text());
