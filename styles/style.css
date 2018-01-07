@@ -505,7 +505,15 @@ h5{
   width: 50px;
   height: 50px;
 }
-
+/*---   SECTION 6   ----------------------------------------------------------*/
+/*------ partners_start ---- */
+.partners .logo_partners{
+   padding: 0.6em 0;
+ }
+ .partners .devider{
+   display: block;
+ }
+ /*----- _partners_contact--------*/  
 /*---   SECTION 7   ----------------------------------------------------------*/
 #section7 {
   -webkit-flex-wrap: wrap;
@@ -907,6 +915,17 @@ footer{
     letter-spacing: 0.5em;
   }
   /* END SECTION STUDENTS */
+  /**  SECTION6   partners  ********************************************/
+/*------ partners_start ---- */
+.partners .logo_partners{
+ display: inline-block;
+  width: 33%;
+  padding: 2em 0;
+}
+.partners .devider{
+  display: none;
+}
+/*----- _partners_contact--------*/ 
 /**  SECTION7   CONTACTS  ********************************************/
 /*------ contact_start ---- */
 #frmContact {
