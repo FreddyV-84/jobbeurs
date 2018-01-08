@@ -8,12 +8,15 @@
         Menu hover:         #db5523
         ...
 -------------------------------------------------------------------------------------------- */
-*{
+
+* {
   box-sizing: border-box;
 }
-a{
+
+a {
   cursor: pointer;
 }
+
 body {
   margin: 0;
   /*width: 100%;*/
@@ -23,7 +26,7 @@ body {
   background: url(../img/bg_section1.png);
   background-repeat: no-repeat;
   background-position: center top;
-  background-color:  #0e3647;
+  background-color: #0e3647;
   color: #f1f1f1;
 }
 
@@ -33,54 +36,56 @@ section {
   padding: 0;
   margin: 0;
 }
-h1{
-  
+
+h1 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 26px;
   letter-spacing: 0;
   color: #fff;
 }
-h2{
-  
+
+h2 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0;
   color: #fff;
 }
+
 h4 {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
 }
-h5{
-  
-  color:#fff;
+
+h5 {
+  color: #fff;
   font-size: 18px;
   letter-spacing: 1px;
   font-style: italic;
   font-weight: 300;
   padding-bottom: 0px;
   line-height: 11px;
-  margin:50px 0 0 0;
+  margin: 50px 0 0 0;
 }
 
-.devider{
-  margin:0 auto;
-  width:46px;
-  height: 4px;
-  background: #ffd62e;
-
-}
-.devider_left{
-  width:46px;
+.devider {
+  margin: 0 auto;
+  width: 46px;
   height: 4px;
   background: #ffd62e;
 }
-.btnEmptyYellow{
+
+.devider_left {
+  width: 46px;
+  height: 4px;
+  background: #ffd62e;
+}
+
+.btnEmptyYellow {
   cursor: pointer;
-  background-color: rgba(26, 48, 59,0.3);
+  background-color: rgba(26, 48, 59, 0.3);
   padding: 10px 20px 9px 20px;
   border: 4px solid #ffd62e;
   min-width: 200px;
@@ -89,11 +94,15 @@ h5{
   font-weight: 300;
   font-style: italic;
   font-family: 'Lato', sans-serif;
-  color:#ffd62e;
+  color: #ffd62e;
 }
-.btnEmptyYellow:hover{
-  color:#0e3647;
-  background-color: #ffd62e;}
+
+.btnEmptyYellow:hover {
+  color: #0e3647;
+  background-color: #ffd62e;
+}
+
+
 /* HAMBURGER MENU
 ---------------------------------------------------------
 ----------------------------------- Start Menu */
@@ -129,7 +138,8 @@ h5{
   width: 50px;
   display: block;
   z-index: 99;
-  cursor: pointer; /* for click event on touch devices */
+  cursor: pointer;
+  /* for click event on touch devices */
   /* -webkit-transition: linear 0.5s all;
   transition: linear 0.5s all; */
 }
@@ -183,7 +193,7 @@ h5{
   position: fixed;
   margin: 0;
   width: 30%;
-  background-color: rgba(26, 48, 59,1);
+  background-color: rgba(26, 48, 59, 1);
   padding: 15px;
   opacity: 0;
   -webkit-transition: ease-in 0.5s all;
@@ -246,31 +256,32 @@ h5{
   /* font-weight: 700; */
 }
 
-#section2, #section3{
-  background-color:  #eee;
-  color:#303b41;
-  padding-top:20px;
-  padding-bottom:20px;
-  
+#section2,
+#section3 {
+  background-color: #eee;
+  color: #303b41;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-#section3{
-  background-color:  #dedede;
+
+#section3 {
+  background-color: #dedede;
 }
-#section4{
-  border-top:5px solid #6e8c9c;
-  background-color:  #eee;
-  color:#303b41;
-  padding-top:50px;
-  padding-bottom:42px;
+
+#section4 {
+  border-top: 5px solid #6e8c9c;
+  background-color: #eee;
+  color: #303b41;
+  padding-top: 50px;
+  padding-bottom: 42px;
 }
-.dark{
-  padding-top:10px;
-  padding-bottom:2px;
+
+.dark {
+  padding-top: 10px;
+  padding-bottom: 2px;
   color: #303b41;
   line-height: 20px;
 }
-
-
 
 
 /* _________________________________________________________________________________________ end Menu */
@@ -278,9 +289,11 @@ h5{
 
 /* SECTION WELCOME
 -------------------------------------------------------------------------------------------- Section Welcome */
-#section1{
-  background-color: rgba(26, 48, 59,0.7);
+
+#section1 {
+  background-color: rgba(26, 48, 59, 0.7);
 }
+
 #titel,
 #welkom,
 #counter {
@@ -291,7 +304,6 @@ h5{
 
 #titel>h1 {
   padding: 48px 24px 0px 24px;
-  
 }
 
 #welkom>h4 {
@@ -300,29 +312,29 @@ h5{
 }
 
 #welkom h4 {
-  
   text-align: center;
-  
 }
-#datumMGMob .dun{
+
+#datumMGMob .dun {
   font-weight: 300;
   font-style: italic;
   font-size: 25px;
   letter-spacing: 1px;
-  
 }
-#datumMG{display:none;}
+
+#datumMG {
+  display: none;
+}
+
 #counter {
-    margin-top:30px;
-    background: #ffd62e;
-    padding-top:16px;
-    padding-bottom: 16px;
-  
+  margin-top: 30px;
+  background: #ffd62e;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-
-.tt{
-  line-height:12px;
+.tt {
+  line-height: 12px;
   font-size: 1em;
   font-weight: 300;
   font-style: italic;
@@ -333,80 +345,100 @@ h5{
 .tg {
   font-size: 2em;
   text-align: center;
-  width:80px;
-  font-weight:  700px;
+  width: 80px;
+  font-weight: 700px;
 }
- #btnEmptyYellow {
+
+#btnEmptyYellow {
   margin-bottom: 40px;
 }
-#btnInschr>a{
+
+#btnInschr>a {
   text-decoration: none;
 }
 
-#btnInschr>a:hover{
+#btnInschr>a:hover {
   text-decoration: none;
-  
-
 }
+
 
 /* ___________________________________________________________________ end Section Welcome */
 
+
 /* SECTION 2 - PROGRAMMA ----------*/
-#planning-container{
-  width:90%;
-  margin:0px auto;
+
+#section2 {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#planning-text {
+  padding: 5px 10%;
+  flex: 1 1 80%;
+  text-align: justify;
+}
+
+#planning-container {
+  /* width: 90%; */
+  margin: 0px auto;
   text-align: center;
   line-height: 1.2em;
-  font-size:18px;
+  font-size: 18px;
   padding-bottom: 5px;
 }
-#planning-container table{
-  border:0px;
-  margin-top:20px;
+
+#planning-container table {
+  border: 0px;
+  margin-top: 20px;
   border-collapse: collapse;
-  width:100%;
+  width: 100%;
 }
 
-#planning-container tr{
-  
-  border:0px;
+#planning-container tr {
+  border: 0px;
 }
-#planning-container td{
-  padding:15px;
-  border:0px;
+
+#planning-container td {
+  padding: 15px;
+  border: 0px;
   border-bottom: 3px solid #eee;
-
 }
-#planning-container td:nth-child(1) { 
- background: #fefefe;
- }
- #planning-container td:nth-child(2) { 
+
+#planning-container td:nth-child(1) {
+  background: #fefefe;
+}
+
+#planning-container td:nth-child(2) {
   text-align: left;
   background: #fcfcfc;
-  }
+}
 
 
 /* SECTION 3 - OPLEIDING ------------------------------------------------------------------*/
-#section3_prog{
+
+#section3_prog {
   width: 90%;
-  margin:0px auto;
+  margin: 0px auto;
 }
-#opleiding_container{
-  
+
+#opleiding_container {
   display: flex;
 }
 
-#opl_omschr{
-  width:100%;
+#opl_omschr {
+  width: 100%;
 }
-#opl_schema>img{
-  width:90%;
+
+#opl_schema>img {
+  width: 90%;
   height: auto;
   max-width: 350px;
   height: auto;
 }
 
+
 /* einde SECTION 3  -----------------------------------------------------------------------*/
+
 
 /* SECTION STUDENTS
 -------------------------------------------------------------------------------------------- Section Students */
@@ -417,14 +449,10 @@ h5{
   display: grid;
   display: -ms-grid;
   -ms-grid-columns: 50% 50%;
-  -ms-grid-rows:auto;
+  -ms-grid-rows: auto;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
-  grid-template-areas: 
-    "klein klein"
-    "groot groot"
-    "tekst tekst"
-    "link link"
+  grid-template-areas: "klein klein" "groot groot" "tekst tekst" "link link"
 }
 
 #cursisten-kleineFotos {
@@ -455,12 +483,14 @@ h5{
   text-align: justify;
   padding: 0 0px;
 }
-#cursisten-infoTekst>h2{
-  padding-top:30px;
+
+#cursisten-infoTekst>h2 {
+  padding-top: 30px;
 }
-#cursisten-contacts{
-  float:right;
-  padding-top:10px;
+
+#cursisten-contacts {
+  float: right;
+  padding-top: 10px;
   letter-spacing: 0.5em;
   cursor: pointer;
 }
@@ -469,7 +499,6 @@ h5{
   color: inherit;
   text-decoration: none;
 }
-
 
 #cursisten-infoLinks {
   grid-area: link;
@@ -491,10 +520,13 @@ h5{
   width: 50px;
   height: 50px;
 }
-#button-left:hover,#button-right:hover{
+
+#button-left:hover,
+#button-right:hover {
   background-color: #ffd62e;
-  border:1px solid #ffd62e;
+  border: 1px solid #ffd62e;
 }
+
 #button-right {
   position: absolute;
   top: 50%;
@@ -505,16 +537,27 @@ h5{
   width: 50px;
   height: 50px;
 }
+
+
 /*---   SECTION 6   ----------------------------------------------------------*/
+
+
 /*------ partners_start ---- */
-.partners .logo_partners{
-   padding: 0.6em 0;
- }
- .partners .devider{
-   display: block;
- }
- /*----- _partners_contact--------*/  
+
+.partners .logo_partners {
+  padding: 0.6em 0;
+}
+
+.partners .devider {
+  display: block;
+}
+
+
+/*----- _partners_contact--------*/
+
+
 /*---   SECTION 7   ----------------------------------------------------------*/
+
 #section7 {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -527,19 +570,23 @@ h5{
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
-  width:90%;
-  margin:0 auto;
-}
-form{
-  width:100%;
-  padding-top:30px;
-    
+  width: 90%;
+  margin: 0 auto;
 }
 
+form {
+  width: 100%;
+  padding-top: 30px;
+}
 
-#naam, #email, #bedrijfsnaam, #bedrijfNaam, #tel, #berichtFrm{
-  border:0;
-  padding:10px;
+#naam,
+#email,
+#bedrijfsnaam,
+#bedrijfNaam,
+#tel,
+#berichtFrm {
+  border: 0;
+  padding: 10px;
   width: 100%;
   margin-bottom: 20px;
   font-size: 1.1em;
@@ -547,17 +594,24 @@ form{
   font-style: italic;
   font-family: 'Lato', sans-serif;
 }
-#naam:required , #email:required , #bedrijfsnaam:required , #bedrijfNaam:required , #tel:required , #berichtFrm:required ,#btnContactFrm:required  {
-  border-left:6px solid #ffd62e;
-  
+
+#naam:required,
+#email:required,
+#bedrijfsnaam:required,
+#bedrijfNaam:required,
+#tel:required,
+#berichtFrm:required,
+#btnContactFrm:required {
+  border-left: 6px solid #ffd62e;
 }
+
 #btnContactFrm {
-  border:0;
-  padding:10px;
+  border: 0;
+  padding: 10px;
   width: 100%;
   margin-bottom: 26px;
   text-transform: uppercase;
-  color:#fff;
+  color: #fff;
   font-size: 1.1em;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
@@ -572,24 +626,23 @@ form{
   min-width: 200px;
   font-family: 'Lato', sans-serif;
 }
-#section7 a{
+
+#section7 a {
   text-decoration: none;
-  color:#ffd62e;
+  color: #ffd62e;
   letter-spacing: 1px;
   /*line-height: 20px;*/
-  margin:0px;
+  margin: 0px;
 }
 
-footer{
+footer {
   line-height: 3em;
   font-size: 11px;
-  color:#6e8c9c;
+  color: #6e8c9c;
   font-weight: 700;
   text-align: center;
   background-color: rgb(26, 48, 59);
 }
-
-
 
 
 /* _________________________________________________________________________________________ end Section Students */
@@ -598,11 +651,7 @@ footer{
 /*  MEDIA QUERY: for-phone-only
 -------------------------------------------------------------------------------------------- max-width: 599px */
 
-@media (max-width: 599px) {
-
-  
-
-}
+@media (max-width: 599px) {}
 
 
 /*  MEDIA QUERY: for-tablet-portrait-up
@@ -610,59 +659,51 @@ footer{
 
 @media (min-width: 600px) {
   /*---section1--------*/
-  #date_welkom{
-    margin:0 auto;
-    display:grid;
+  #date_welkom {
+    margin: 0 auto;
+    display: grid;
     display: -ms-grid;
     width: 80%;
     -ms-grid-columns: 30% auto;
     -ms-grid-rows: 20% auto 25%;
     grid-template-columns: 30% auto;
     grid-template-rows: 20% auto 25%;
-    
     /*justify-items: center;*/
   }
-  #datumMGMob{
-    display:none;
+  #datumMGMob {
+    display: none;
   }
-  #datumMG{
+  #datumMG {
     display: inline-block;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column-start: 1;
     grid-column-end: 2;
-
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row-start: 1;
-    grid-row-end: 4;/*3*/
+    grid-row-end: 4;
+    /*3*/
     text-align: right;
-    padding-right:15px;
+    padding-right: 15px;
   }
-  div#datumMG>div.super{
-    padding-top:50px;
-    
+  div#datumMG>div.super {
+    padding-top: 50px;
     font-weight: 300;
     font-style: italic;
     font-size: 80px;
     line-height: 70px;
-    
   }
-  .dun{
-    
+  .dun {
     font-weight: 300;
     font-style: italic;
     font-size: 22px;
     letter-spacing: 3px;
   }
-  div#titel{
+  div#titel {
     justify-content: left;
-    margin:0px;
-    
-
-    
+    margin: 0px;
   }
-  
   div#titel>h1 {
     float: left;
     font-size: 38px;
@@ -670,57 +711,63 @@ footer{
     padding: 8px;
     padding-top: 16px;
     margin-bottom: 0px;
-    
   }
-  div#welkom h4{
+  div#welkom h4 {
     text-align: left;
     padding: 0px 8px 10px 8px;
     margin: 0px;
   }
- #btnInschr{
-   text-align: left;
-   padding: 8px;
- }
+  #btnInschr {
+    text-align: left;
+    padding: 8px;
+  }
 }
+
+
 /** SECTION2 - Table **/
-#planning-container table{
-  width:90%;
+
+#planning-container table {
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#planning-container td{
-  padding:15px 30px 15px 30px;
-  
-
+#planning-container td {
+  padding: 15px 30px 15px 30px;
 }
-#planning-container td:nth-child(1) { 
- background: #fefefe;
- 
- }
- #planning-container td:nth-child(2) { 
+
+#planning-container td:nth-child(1) {
+  background: #fefefe;
+}
+
+#planning-container td:nth-child(2) {
   text-align: left;
   background: #fcfcfc;
-  }
+}
 
 
 /*---------------------------------------------------------------------------------------------*/
+
+
 /*  MEDIA QUERY: for-tablet-landscape-up
 -------------------------------------------------------------------------------------------- min-width: 900px */
 
 @media (min-width: 900px) {
-
-  
   #menu {
     height: 100px;
   }
-  #menu h1{margin: 20px 50px 0px 20px;}
-  #menu h3{margin-right: 50px;margin-top: -5px;}
+  #menu h1 {
+    margin: 20px 50px 0px 20px;
+  }
+  #menu h3 {
+    margin-right: 50px;
+    margin-top: -5px;
+  }
   .navicon {
     display: none;
   }
   .toggle {
-    background-color: rgba(26, 48, 59,0.95);
+    background-color: rgba(26, 48, 59, 0.95);
     transform: unset;
     opacity: 1;
     display: flex;
@@ -728,7 +775,7 @@ footer{
     width: 100%;
     height: 100px;
     padding: 0;
-    padding-top:2px;
+    padding-top: 2px;
     -webkit-transition: unset;
     transition: unset;
   }
@@ -738,7 +785,6 @@ footer{
     padding-top: 8px;
     min-width: 270px;
   }
-  
   .toggle__menu {
     margin: 0;
     padding: 0 10px 0 0;
@@ -761,80 +807,68 @@ footer{
     color: #ffd62e;
   }
   /*---section1--------*/
-  #date_welkom{
-    margin:0 auto;
-    display:grid;
+  #date_welkom {
+    margin: 0 auto;
+    display: grid;
     display: -ms-grid;
     width: 70%;
     -ms-grid-columns: 30% auto;
-    -ms-grid-rows:20% auto;
+    -ms-grid-rows: 20% auto;
     grid-template-columns: 30% auto;
     grid-template-rows: 20% auto;
-    
   }
-  #datumMGMob{
-    display:none;
+  #datumMGMob {
+    display: none;
   }
-  #datumMG{
+  #datumMG {
     display: inline-block;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column-start: 1;
     grid-column-end: 2;
-
-    -ms-grid-row:1;
+    -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row-start: 1;
     grid-row-end: 4;
     text-align: center;
   }
-  div#datumMG>div.super{
-    padding-top:35px;
-    
+  div#datumMG>div.super {
+    padding-top: 35px;
     font-weight: 300;
     font-style: italic;
     font-size: 120px;
     line-height: 110px;
-    
   }
-  .dun{
-    
+  .dun {
     font-weight: 300;
     font-style: italic;
     font-size: 29px;
     letter-spacing: 6px;
   }
-  div#titel{
+  div#titel {
     justify-content: left;
-    margin:0px;
-    
-
-    
+    margin: 0px;
   }
-  
   div#titel>h1 {
     float: left;
     font-size: 38px;
     text-align: left;
     padding: 8px;
     margin-bottom: 0px;
-    
   }
-  div#welkom h4{
+  div#welkom h4 {
     text-align: left;
     margin: 0px;
   }
-
   /*------ counter ---- */
   #counter {
-    padding-top:16px;
+    padding-top: 16px;
     padding-bottom: 24px;
     margin-top: 52px;
-    
   }
   #counter>div {
     max-width: 150px;
-    padding-left:10px;
+    padding-left: 10px;
     padding-right: 8px;
   }
   /*#counter>div>div {
@@ -843,16 +877,25 @@ footer{
   }*/
   .tg {
     font-size: 38px;
-    
   }
   .tt {
-    line-height:10px;
+    line-height: 10px;
     font-size: 20px;
   }
-
   /* SECTION 2 - PROGRAMMA ----------*/
-  #planning-container table{
-    width: 70%;
+  #planning-container {
+    flex: 1 0 auto;
+  }
+  #planning-text {
+    flex: 1 1 auto;
+    padding: 0 20px;
+    padding-top: 69px;
+    padding-right: 50px;
+    order: 1;
+  }
+  #section2 {
+    display: flex;
+    flex-flow: row nowrap;
   }
   /* SECTION 3 - OPLEIDING ----------*/
   #opleiding-container {
@@ -861,34 +904,27 @@ footer{
     display: flex;
     flex-flow: row wrap;
   }
-  
-  #opl_omschr, #opl_schema {
+  #opl_omschr,
+  #opl_schema {
     flex: 1 auto;
     width: 40%;
-    
   }
-  #opl_omschr{
+  #opl_omschr {
     text-align: left;
     line-height: 1.6em;
   }
-  #opl_schema>img{
+  #opl_schema>img {
     width: 350px;
     height: auto;
   }
-  #devider_opl{
-    
-    margin:0 0;
+  #devider_opl {
+    margin: 0 0;
   }
-
   /* EINDE SECTION 3 ---------------*/
   /* SECTION STUDENTS */
   #cursisten-container {
-    grid-template-areas: 
-      "klein klein"
-      "groot tekst"
-      "link link"
+    grid-template-areas: "klein klein" "groot tekst" "link link"
   }
-
   #button-left {
     display: none;
   }
@@ -899,51 +935,46 @@ footer{
     width: 11.11%;
   }
   #cursisten-groteFotos {
-    border-left:6px solid #ffd62e;
+    border-left: 6px solid #ffd62e;
   }
-  
   #cursisten-infoTekst {
     line-height: 1.6em;
     padding: 0 20px;
   }
-  #cursisten-infoTekst>h2{
-    padding-top:0px;
+  #cursisten-infoTekst>h2 {
+    padding-top: 0px;
   }
-  #cursisten-contacts{
-    float:right;
-    padding-top:0px;
+  #cursisten-contacts {
+    float: right;
+    padding-top: 0px;
     letter-spacing: 0.5em;
   }
   /* END SECTION STUDENTS */
   /**  SECTION6   partners  ********************************************/
-/*------ partners_start ---- */
-.partners .logo_partners{
- display: inline-block;
-  width: 33%;
-  padding: 2em 0;
-}
-.partners .devider{
-  display: none;
-}
-/*----- _partners_contact--------*/ 
-/**  SECTION7   CONTACTS  ********************************************/
-/*------ contact_start ---- */
-#frmContact {
-  flex-grow: 1;
-  width: 45%;
-}
-
-#geg {
-  flex-grow: 1;
-  width: 45%;
-}
-.geg{
-  padding-top: 30px;
-}
-/*----- _End_contact--------*/  
-
-
-
+  /*------ partners_start ---- */
+  .partners .logo_partners {
+    display: inline-block;
+    width: 33%;
+    padding: 2em 0;
+  }
+  .partners .devider {
+    display: none;
+  }
+  /*----- _partners_contact--------*/
+  /**  SECTION7   CONTACTS  ********************************************/
+  /*------ contact_start ---- */
+  #frmContact {
+    flex-grow: 1;
+    width: 45%;
+  }
+  #geg {
+    flex-grow: 1;
+    width: 45%;
+  }
+  .geg {
+    padding-top: 30px;
+  }
+  /*----- _End_contact--------*/
 }
 
 
