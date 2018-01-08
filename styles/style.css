@@ -17,8 +17,15 @@ a {
   cursor: pointer;
 }
 
-input:focus{
-    outline: none;
+input:focus {
+  outline: none;
+}
+
+/* remove rounded corners from form fields on iPad, iPhone */
+input,
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
 
 body {
@@ -99,7 +106,6 @@ h5 {
   font-style: italic;
   font-family: 'Lato', sans-serif;
   color: #ffd62e;
-  border-radius: 0px; /* removes rounded corners on iPhone 5 safari */
 }
 
 .btnEmptyYellow:hover {
@@ -543,6 +549,7 @@ h5 {
   height: 50px;
 }
 
+
 /*---   SECTION 5 Contact/Register   ----------------------------------------------------------*/
 
 #section5 {
@@ -624,7 +631,10 @@ form {
 
 
 /*---   SECTION 6   ----------------------------------------------------------*/
+
+
 /* partners */
+
 .partners .logo_partners {
   padding: 0.6em 0;
 }
@@ -632,6 +642,8 @@ form {
 .partners .devider {
   display: block;
 }
+
+
 /* __________________________________________________________________________ end Section Contact / Register */
 
 footer {
@@ -642,7 +654,6 @@ footer {
   text-align: center;
   background-color: rgb(26, 48, 59);
 }
-
 
 
 /*  MEDIA QUERY: for-phone-only
@@ -960,8 +971,6 @@ footer {
     padding-top: 30px;
   }
   /*----- _End_contact--------*/
-
-
   /**  SECTION6   partners  ********************************************/
   /*------ partners_start ---- */
   .partners .logo_partners {
