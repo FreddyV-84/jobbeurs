@@ -21,7 +21,9 @@ input:focus {
   outline: none;
 }
 
+
 /* remove rounded corners from form fields on iPad, iPhone */
+
 input,
 textarea {
   -webkit-appearance: none;
@@ -438,6 +440,7 @@ h5 {
 
 #opl_omschr {
   width: 100%;
+  text-align: justify;
 }
 
 #opl_schema>img {
@@ -907,15 +910,17 @@ footer {
   }
   /* SECTION 3 - OPLEIDING ----------*/
   #opleiding-container {
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
     display: flex;
-    flex-flow: row wrap;
   }
   #opl_omschr,
   #opl_schema {
-    flex: 1 auto;
-    width: 40%;
+    flex: 1 1 auto;
+    align-self: center;
+  }
+  #opl_schema {
+    padding-left: 15px;
   }
   #opl_omschr {
     text-align: left;
