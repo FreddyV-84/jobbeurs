@@ -538,27 +538,9 @@ h5 {
   height: 50px;
 }
 
+/*---   SECTION 5 Contact/Register   ----------------------------------------------------------*/
 
-/*---   SECTION 6   ----------------------------------------------------------*/
-
-
-/*------ partners_start ---- */
-
-.partners .logo_partners {
-  padding: 0.6em 0;
-}
-
-.partners .devider {
-  display: block;
-}
-
-
-/*----- _partners_contact--------*/
-
-
-/*---   SECTION 7   ----------------------------------------------------------*/
-
-#section7 {
+#section5 {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: center;
@@ -627,13 +609,25 @@ form {
   font-family: 'Lato', sans-serif;
 }
 
-#section7 a {
+#section5 a {
   text-decoration: none;
   color: #ffd62e;
   letter-spacing: 1px;
   /*line-height: 20px;*/
   margin: 0px;
 }
+
+
+/*---   SECTION 6   ----------------------------------------------------------*/
+/* partners */
+.partners .logo_partners {
+  padding: 0.6em 0;
+}
+
+.partners .devider {
+  display: block;
+}
+/* __________________________________________________________________________ end Section Contact / Register */
 
 footer {
   line-height: 3em;
@@ -644,8 +638,6 @@ footer {
   background-color: rgb(26, 48, 59);
 }
 
-
-/* _________________________________________________________________________________________ end Section Students */
 
 
 /*  MEDIA QUERY: for-phone-only
@@ -949,19 +941,7 @@ footer {
     padding-top: 0px;
     letter-spacing: 0.5em;
   }
-  /* END SECTION STUDENTS */
-  /**  SECTION6   partners  ********************************************/
-  /*------ partners_start ---- */
-  .partners .logo_partners {
-    display: inline-block;
-    width: 33%;
-    padding: 2em 0;
-  }
-  .partners .devider {
-    display: none;
-  }
-  /*----- _partners_contact--------*/
-  /**  SECTION7   CONTACTS  ********************************************/
+  /**  SECTION5   CONTACTS/REGISTER  ********************************************/
   /*------ contact_start ---- */
   #frmContact {
     flex-grow: 1;
@@ -975,6 +955,18 @@ footer {
     padding-top: 30px;
   }
   /*----- _End_contact--------*/
+
+
+  /**  SECTION6   partners  ********************************************/
+  /*------ partners_start ---- */
+  .partners .logo_partners {
+    display: inline-block;
+    width: 33%;
+    padding: 2em 0;
+  }
+  .partners .devider {
+    display: none;
+  }
 }
 
 
