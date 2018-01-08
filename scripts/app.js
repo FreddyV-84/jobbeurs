@@ -15,18 +15,9 @@ function init() {
     document.querySelector('.navicon').onclick = toggleMenu;
     var links = document.querySelectorAll('.toggle__menu a');
 
-
-    // for (var i = 0; i < links.length; i++) {
-    //     try {
-    //         throw i
-    //     } catch (ii) {
-    //         links[ii].onclick = (e) => {
-    //             e.preventDefault();
-    //             toggleMenu();
-    //             scrollTo(document.getElementById("section" + (ii + 1)).offsetTop - headerHeight);
-    //         }
-    //     }
-    // }
+    document.getElementById("btnInschr").onclick = function () {
+        scrollTo(document.getElementById("section5").offsetTop - headerHeight);
+    }
 
     for (let i = 0; i < links.length; i++) {
         links[i].onclick = (e) => {
@@ -160,7 +151,7 @@ function buildImages() { // dynamisch toevoegen van de grote en kleine foto's
     let cursistenList = $(cursisten).find("cursist");
 
     //for (let index = 1; index <= cursistenList.length; index++) {
-    cursistenList.each( function() {
+    cursistenList.each(function () {
         let imgG = document.createElement("img");
         let imgK = document.createElement("img");
 
@@ -232,9 +223,9 @@ function buttons() { // knoppen (komen pas zichtbaar onder de 900px) functie: vo
 function changeInfo(cursist) { // toont dynamisch de juiste titel en tekst bij de juiste cursist
     $("#infoTitel").text(cursist.find("voornaam").text() + " " + cursist.find("naam").text());
     $("#infoTekst").text(cursist.find("info").text());
-    $("#cursisten-contacts a").prop("href","mailto:" + cursist.find("email").text());
+    $("#cursisten-contacts a").prop("href", "mailto:" + cursist.find("email").text());
 
-    $("#cursist-in").prop('onclick',null).off('click');
+    $("#cursist-in").prop('onclick', null).off('click');
     $("#cursist-in").on("click", () => {
         window.open(cursist.find("linkedin").text());
     });
