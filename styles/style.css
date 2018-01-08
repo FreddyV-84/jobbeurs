@@ -99,6 +99,7 @@ h5 {
   font-style: italic;
   font-family: 'Lato', sans-serif;
   color: #ffd62e;
+  border-radius: 0px; /* removes rounded corners on iPhone 5 safari */
 }
 
 .btnEmptyYellow:hover {
