@@ -444,6 +444,10 @@ h5 {
   text-align: justify;
 }
 
+#opl_omschr>h2 {
+  text-align: center;
+}
+
 #opl_schema>img {
   width: 90%;
   height: auto;
