@@ -644,11 +644,16 @@ form {
 /* partners */
 
 .partners .logo_partners {
+  display: inline-block;
   padding: 0.6em 0;
+  width: 30%;
+}
+.partners .logo_partners img{
+  width: 80px;
 }
 
 .partners .devider {
-  display: block;
+  display: none;
 }
 
 
@@ -1001,6 +1006,9 @@ footer {
     display: inline-block;
     width: 33%;
     padding: 2em 0;
+  }
+ .partners .logo_partners img{
+    width: 140px;
   }
   .partners .devider {
     display: none;
