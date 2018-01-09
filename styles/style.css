@@ -904,6 +904,7 @@ footer {
     padding-top: 69px;
     padding-right: 50px;
     order: 1;
+    max-width: 550px;
   }
   #section2 {
     display: flex;
