@@ -289,7 +289,9 @@ h5 {
   padding-top: 50px;
   padding-bottom: 42px;
 }
-
+#section6 {
+  background-color: rgb(26, 48, 59);
+}
 .dark {
   padding-top: 10px;
   padding-bottom: 2px;
@@ -387,9 +389,9 @@ h5 {
 }
 
 #planning-text {
-  padding: 5px 10%;
+  padding: 5px 5%;
   flex: 1 1 80%;
-  text-align: left;
+  text-align: justify;
 }
 
 #planning-container {
@@ -579,6 +581,7 @@ h5 {
 form {
   width: 100%;
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 #naam,
@@ -646,7 +649,11 @@ form {
 .partners .logo_partners {
   padding: 0.6em 0;
 }
-
+.partners .logo_partners img{
+  padding: 0.6em 0;
+  width: 100px;
+  height: auto;
+}
 .partners .devider {
   display: block;
 }
@@ -660,7 +667,7 @@ footer {
   color: #6e8c9c;
   font-weight: 700;
   text-align: center;
-  background-color: rgb(26, 48, 59);
+  background-color: rgb(22, 33, 39);
 }
 
 
@@ -901,29 +908,38 @@ footer {
   /* SECTION 2 - PROGRAMMA ----------*/
   #planning-container {
     flex: 1 0 auto;
+    padding-left: 5%;
+    padding-right: 20px;
   }
   #planning-container>h2 {
     text-align: left;
-    padding-left: 30px;
+    
   }
   #planning-container>.devider {
     /* text-align: left; */
     /* padding-left: 30px; */
     margin: 0;
-    margin-left: 30px;
+    
+  }
+  #planning-container table {
+    width: 100%;
+    margin-left: 0;
+    margin-right:20px;
   }
   #planning-text {
     flex: 1 1 auto;
-    padding: 0 20px;
+    padding-left: 0px;
     padding-top: 69px;
-    padding-right: 50px;
+    padding-right: 5%;
     order: 1;
-    max-width: 550px;
+    max-width: 50%;
+    line-height: 1.6em;
   }
   #section2 {
     display: flex;
     flex-flow: row nowrap;
   }
+  
   /* SECTION 3 - OPLEIDING ----------*/
   #opleiding-container {
     flex-flow: row nowrap;
@@ -936,14 +952,14 @@ footer {
     align-self: center;
   }
   #opl_schema {
-    padding-left: 15px;
+    padding-left: 5%;
   }
   #opl_omschr {
-    text-align: left;
+  
     line-height: 1.6em;
   }
   #opl_omschr>h2 {
-    text-align: unset;
+    text-align: unset
   }
   #opl_schema>img {
     width: 350px;
