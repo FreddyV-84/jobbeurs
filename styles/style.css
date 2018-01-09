@@ -902,6 +902,16 @@ footer {
   #planning-container {
     flex: 1 0 auto;
   }
+  #planning-container>h2 {
+    text-align: left;
+    padding-left: 30px;
+  }
+  #planning-container>.devider {
+    /* text-align: left; */
+    /* padding-left: 30px; */
+    margin: 0;
+    margin-left: 30px;
+  }
   #planning-text {
     flex: 1 1 auto;
     padding: 0 20px;
@@ -931,6 +941,9 @@ footer {
   #opl_omschr {
     text-align: left;
     line-height: 1.6em;
+  }
+  #opl_omschr>h2 {
+    text-align: unset;
   }
   #opl_schema>img {
     width: 350px;
