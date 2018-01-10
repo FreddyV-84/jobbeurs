@@ -20,7 +20,7 @@ function init() {
     }
 
     for (let i = 0; i < links.length; i++) {
-        links[i].onclick = (e) => {
+        links[i].onclick = function (e) {
             e.preventDefault();
             toggleMenu();
             scrollTo(document.getElementById("section" + (i + 1)).offsetTop - headerHeight);
@@ -216,8 +216,12 @@ function buttons() { // knoppen (komen pas zichtbaar onder de 900px) functie: vo
     let btnLeft = document.getElementById("button-left");
     let btnRight = document.getElementById("button-right");
 
-    btnLeft.onclick = () => showImg(fotoI += -1);
-    btnRight.onclick = () => showImg(fotoI += 1);
+    btnLeft.onclick = function () {
+        showImg(fotoI += -1)
+    };
+    btnRight.onclick = function () {
+        showImg(fotoI += 1)
+    };
 }
 
 function changeInfo(cursist) { // toont dynamisch de juiste titel en tekst bij de juiste cursist
@@ -226,7 +230,7 @@ function changeInfo(cursist) { // toont dynamisch de juiste titel en tekst bij d
     $("#cursisten-contacts a").prop("href", "mailto:" + cursist.find("email").text());
 
     $("#cursist-in").prop('onclick', null).off('click');
-    $("#cursist-in").on("click", () => {
+    $("#cursist-in").on("click", function () {
         window.open(cursist.find("linkedin").text());
     });
 }
